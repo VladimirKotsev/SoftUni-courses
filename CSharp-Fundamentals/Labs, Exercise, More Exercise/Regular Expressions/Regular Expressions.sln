@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Furniture", "01. Furniture\01. Furniture.csproj", "{6D078B79-BA65-4FDB-9E8F-D2D65C1D26A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{FFD38463-BC09-4628-8D7D-4187983565DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise", "Exercise", "{E5404B73-F350-49FF-9AFE-8EE24017B85C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "More exercise", "More exercise", "{33D904A1-8EA5-4B8D-A197-2F192CF4EC82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Race", "02. Race\02. Race.csproj", "{C441ED42-8AB0-4A17-A4F0-2F4A88CFBB4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. SoftUni Bar Income", "03. SoftUni Bar Income\03. SoftUni Bar Income.csproj", "{23469637-5185-45C2-84F9-32E6C61E52BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Star Enigma", "04. Star Enigma\04. Star Enigma.csproj", "{8241F931-8651-410C-92A1-065534200BB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Nether Realms", "05. Nether Realms\05. Nether Realms.csproj", "{459DB298-6E6F-4A9E-82D4-A85D81BCE9E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Extract Emails", "06. Extract Emails\06. Extract Emails.csproj", "{283ED91B-EFF9-4132-A2E8-8DF871DC672D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D078B79-BA65-4FDB-9E8F-D2D65C1D26A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D078B79-BA65-4FDB-9E8F-D2D65C1D26A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D078B79-BA65-4FDB-9E8F-D2D65C1D26A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D078B79-BA65-4FDB-9E8F-D2D65C1D26A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C441ED42-8AB0-4A17-A4F0-2F4A88CFBB4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C441ED42-8AB0-4A17-A4F0-2F4A88CFBB4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C441ED42-8AB0-4A17-A4F0-2F4A88CFBB4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C441ED42-8AB0-4A17-A4F0-2F4A88CFBB4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23469637-5185-45C2-84F9-32E6C61E52BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23469637-5185-45C2-84F9-32E6C61E52BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23469637-5185-45C2-84F9-32E6C61E52BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23469637-5185-45C2-84F9-32E6C61E52BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8241F931-8651-410C-92A1-065534200BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8241F931-8651-410C-92A1-065534200BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8241F931-8651-410C-92A1-065534200BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8241F931-8651-410C-92A1-065534200BB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{459DB298-6E6F-4A9E-82D4-A85D81BCE9E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{459DB298-6E6F-4A9E-82D4-A85D81BCE9E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{459DB298-6E6F-4A9E-82D4-A85D81BCE9E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{459DB298-6E6F-4A9E-82D4-A85D81BCE9E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{283ED91B-EFF9-4132-A2E8-8DF871DC672D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{283ED91B-EFF9-4132-A2E8-8DF871DC672D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{283ED91B-EFF9-4132-A2E8-8DF871DC672D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{283ED91B-EFF9-4132-A2E8-8DF871DC672D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6D078B79-BA65-4FDB-9E8F-D2D65C1D26A9} = {E5404B73-F350-49FF-9AFE-8EE24017B85C}
+		{C441ED42-8AB0-4A17-A4F0-2F4A88CFBB4C} = {E5404B73-F350-49FF-9AFE-8EE24017B85C}
+		{23469637-5185-45C2-84F9-32E6C61E52BE} = {E5404B73-F350-49FF-9AFE-8EE24017B85C}
+		{8241F931-8651-410C-92A1-065534200BB2} = {E5404B73-F350-49FF-9AFE-8EE24017B85C}
+		{459DB298-6E6F-4A9E-82D4-A85D81BCE9E2} = {E5404B73-F350-49FF-9AFE-8EE24017B85C}
+		{283ED91B-EFF9-4132-A2E8-8DF871DC672D} = {E5404B73-F350-49FF-9AFE-8EE24017B85C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AE6031A-5D79-4781-83F2-C33D283BAA9D}
+	EndGlobalSection
+EndGlobal
