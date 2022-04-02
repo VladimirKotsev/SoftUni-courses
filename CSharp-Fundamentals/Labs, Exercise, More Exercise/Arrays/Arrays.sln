@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Day of Week", "01. Day of Week\01. Day of Week.csproj", "{2E9A93F8-5FF2-466A-941B-E9089A461188}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lab", "Lab", "{14675639-1D65-4EE6-88D0-8FC4F12191FD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercise", "Exercise", "{3F4C0E6B-8A4D-477E-832C-894C0A426D55}"
@@ -25,25 +23,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Equal Arrays", "07. Equ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Condense Array to Number", "08. Condense Array to Number\08. Condense Array to Number.csproj", "{9A5B29A8-1B92-401C-8EA9-232D3D13D849}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Train", "01. Train\01. Train.csproj", "{C51B6D18-3315-4FD0-B75E-15EAE7465571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Train", "01. Train\01. Train.csproj", "{C51B6D18-3315-4FD0-B75E-15EAE7465571}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Common Elements", "02. Common Elements\02. Common Elements.csproj", "{D3C03BAE-4815-473A-A322-47EA89ABFEBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Common Elements", "02. Common Elements\02. Common Elements.csproj", "{D3C03BAE-4815-473A-A322-47EA89ABFEBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Zig-Zag Arrays", "03. Zig-Zag Arrays\03. Zig-Zag Arrays.csproj", "{C03D2258-0F5B-4D10-AA02-E765C34A4D64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Zig-Zag Arrays", "03. Zig-Zag Arrays\03. Zig-Zag Arrays.csproj", "{C03D2258-0F5B-4D10-AA02-E765C34A4D64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Array Rotation", "04. Array Rotation\04. Array Rotation.csproj", "{70D317CC-1FEC-4D11-AADF-7203512A04F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Array Rotation", "04. Array Rotation\04. Array Rotation.csproj", "{70D317CC-1FEC-4D11-AADF-7203512A04F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Top Integers", "05. Top Integers\05. Top Integers.csproj", "{B5EBA87F-4035-4968-B7EB-A2ADA0EC598E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Top Integers", "05. Top Integers\05. Top Integers.csproj", "{B5EBA87F-4035-4968-B7EB-A2ADA0EC598E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Equal Sum", "06. Equal Sum\06. Equal Sum.csproj", "{311453FF-6FCF-4BF7-A8C9-76BDA06C65F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Equal Sum", "06. Equal Sum\06. Equal Sum.csproj", "{311453FF-6FCF-4BF7-A8C9-76BDA06C65F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Max Sequence of Equal Elements", "07. Max Sequence of Equal Elements\07. Max Sequence of Equal Elements.csproj", "{48486BA6-9848-48CC-8FDE-0F7C677A9905}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Max Sequence of Equal Elements", "07. Max Sequence of Equal Elements\07. Max Sequence of Equal Elements.csproj", "{48486BA6-9848-48CC-8FDE-0F7C677A9905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Magic Sum", "08. Magic Sum\08. Magic Sum.csproj", "{BF9AEE45-F4AE-4A90-A022-58D1F2168BDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Magic Sum", "08. Magic Sum\08. Magic Sum.csproj", "{BF9AEE45-F4AE-4A90-A022-58D1F2168BDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Kamino Factory", "09. Kamino Factory\09. Kamino Factory.csproj", "{F67CD63E-1B07-4A20-B7C5-F0345EB08928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Kamino Factory", "09. Kamino Factory\09. Kamino Factory.csproj", "{F67CD63E-1B07-4A20-B7C5-F0345EB08928}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. LadyBugs", "10. LadyBugs\10. LadyBugs.csproj", "{3FBB1732-4853-4350-839A-5199DE508859}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10. LadyBugs", "10. LadyBugs\10. LadyBugs.csproj", "{3FBB1732-4853-4350-839A-5199DE508859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Day Of Week", "01. Day Of Week\01. Day Of Week.csproj", "{710AF9DC-F5E2-4A43-902F-4378DEA02D62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +51,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2E9A93F8-5FF2-466A-941B-E9089A461188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2E9A93F8-5FF2-466A-941B-E9089A461188}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2E9A93F8-5FF2-466A-941B-E9089A461188}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2E9A93F8-5FF2-466A-941B-E9089A461188}.Release|Any CPU.Build.0 = Release|Any CPU
 		{23CEC42C-354B-4E7C-BAF8-59D09F397994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{23CEC42C-354B-4E7C-BAF8-59D09F397994}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23CEC42C-354B-4E7C-BAF8-59D09F397994}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -123,12 +119,15 @@ Global
 		{3FBB1732-4853-4350-839A-5199DE508859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FBB1732-4853-4350-839A-5199DE508859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3FBB1732-4853-4350-839A-5199DE508859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710AF9DC-F5E2-4A43-902F-4378DEA02D62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710AF9DC-F5E2-4A43-902F-4378DEA02D62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710AF9DC-F5E2-4A43-902F-4378DEA02D62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710AF9DC-F5E2-4A43-902F-4378DEA02D62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2E9A93F8-5FF2-466A-941B-E9089A461188} = {14675639-1D65-4EE6-88D0-8FC4F12191FD}
 		{23CEC42C-354B-4E7C-BAF8-59D09F397994} = {14675639-1D65-4EE6-88D0-8FC4F12191FD}
 		{26113BA4-7C4D-49DF-8F10-2F2FA081B8E7} = {14675639-1D65-4EE6-88D0-8FC4F12191FD}
 		{EA667106-BFF2-41ED-A0C4-5EBAC44C1D60} = {14675639-1D65-4EE6-88D0-8FC4F12191FD}
@@ -146,6 +145,7 @@ Global
 		{BF9AEE45-F4AE-4A90-A022-58D1F2168BDF} = {3F4C0E6B-8A4D-477E-832C-894C0A426D55}
 		{F67CD63E-1B07-4A20-B7C5-F0345EB08928} = {3F4C0E6B-8A4D-477E-832C-894C0A426D55}
 		{3FBB1732-4853-4350-839A-5199DE508859} = {3F4C0E6B-8A4D-477E-832C-894C0A426D55}
+		{710AF9DC-F5E2-4A43-902F-4378DEA02D62} = {14675639-1D65-4EE6-88D0-8FC4F12191FD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {46F27A54-0A9B-4FE4-B38B-4FEB09319B87}
