@@ -7,21 +7,45 @@ namespace _08._Balanced_Parenthesis
     {
         static void Main(string[] args)
         {
-            Stack<int> stack1 = new Stack<int>();
-            Stack<int> stack2 = new Stack<int>();
+            Stack<int> openParentheses = new Stack<int>();
+            Stack<int> closedParentheses = new Stack<int>();
             string input = Console.ReadLine();
             for (int i = 0; i < input.Length / 2; i++)
-                stack1.Push(input[i]);
+                openParentheses.Push(input[i]);
             for (int i = input.Length - 1; i >= input.Length / 2; i--)
-                stack2.Push(input[i]);
+                closedParentheses.Push(input[i]);
             { }
-            //bool answer = true;
-            while(stack1.Count != 0)
+            while(openParentheses.Count != 0)
             {
-                if (stack2.Peek() - 1 == stack1.Peek() || stack2.Peek() - 2 == stack1.Peek())
+                if (openParentheses.Peek() == 40 && closedParentheses.Peek() == 41)
                 {
-                    stack1.Pop();
-                    stack2.Pop();
+                    openParentheses.Pop();
+                    closedParentheses.Pop();
+                }
+                else if (openParentheses.Peek() == 91 && closedParentheses.Peek() == 93)
+                {
+                    openParentheses.Pop();
+                    closedParentheses.Pop();
+                }
+                else if (openParentheses.Peek() == 123 && closedParentheses.Peek() == 125)
+                {
+                    openParentheses.Pop();
+                    closedParentheses.Pop();
+                }
+                else if (openParentheses.Peek() == 41 && closedParentheses.Peek() == 40)
+                {
+                    openParentheses.Pop();
+                    closedParentheses.Pop();
+                }
+                else if (openParentheses.Peek() == 93 && closedParentheses.Peek() == 91)
+                {
+                    openParentheses.Pop();
+                    closedParentheses.Pop();
+                }
+                else if (openParentheses.Peek() == 125 && closedParentheses.Peek() == 123)
+                {
+                    openParentheses.Pop();
+                    closedParentheses.Pop();
                 }
                 else
                 {
@@ -30,23 +54,6 @@ namespace _08._Balanced_Parenthesis
                 }
             }
             Console.WriteLine("YES");
-            //for (int i = input.Length / 2 ; i < input.Length; i++)
-            //{
-            //    if (stack.Peek() == input[i] - 1 || stack.Peek() == input[i] - 2)
-            //        answer = true;               
-            //    else
-            //    {
-            //        answer = false;
-            //        break;
-            //    }
-
-            //    stack.Pop();                  
-            //}
-            //if (answer)
-            //    Console.WriteLine("YES");
-            //else
-            //    Console.WriteLine("NO");
-            
         }
     }
 }
