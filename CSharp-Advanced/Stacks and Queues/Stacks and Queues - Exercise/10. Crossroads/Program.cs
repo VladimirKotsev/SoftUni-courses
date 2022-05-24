@@ -51,10 +51,11 @@ namespace _10._Crossroads
                             else
                             {
                                 int count1 = crossroad.Count;
+                                char hitIndex = crossroad.Peek();
                                 for (int j = 0; j < count1 - 1; j++)
                                     currCar.Append(crossroad.Dequeue().ToString());
                                 Console.WriteLine("A crash happened!");
-                                Console.WriteLine($"{currCar} was hit at {crossroad.Dequeue()}.");
+                                Console.WriteLine($"{currCar} was hit at {hitIndex}.");
                                 return;
                             }
                         }
