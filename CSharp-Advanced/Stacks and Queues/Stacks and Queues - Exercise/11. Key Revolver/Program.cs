@@ -36,7 +36,7 @@ namespace _11._Key_Revolver
                     locks.Dequeue();
                     weapon.Dequeue();
                 }
-                else if (weapon.Peek() > locks.Peek()) //not succeded lock
+                else //not succeded lock
                 {
                     Console.WriteLine("Ping!");
                     weapon.Dequeue();
