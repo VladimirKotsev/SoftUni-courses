@@ -30,12 +30,12 @@ namespace _04._MatrixShuffle
                 bool checkCol1 = false;
                 bool checkCol2 = false;
 
-                int row1 = int.Parse(cmd[1]);
-                int row2 = int.Parse(cmd[3]);
-                int col1 = int.Parse(cmd[2]);
-                int col2 = int.Parse(cmd[4]);
                 if (cmd[0] == "swap" && cmd.Length == 5)
                 {
+                    int row1 = int.Parse(cmd[1]);
+                    int row2 = int.Parse(cmd[3]);
+                    int col1 = int.Parse(cmd[2]);
+                    int col2 = int.Parse(cmd[4]);
                     checkRow1 = row1 >= 0 && row1 <= dimensions[0];
                     checkRow2 = row2 >= 0 && row2 <= dimensions[0];
                     checkCol1 = col1 >= 0 && col1 <= dimensions[1];
