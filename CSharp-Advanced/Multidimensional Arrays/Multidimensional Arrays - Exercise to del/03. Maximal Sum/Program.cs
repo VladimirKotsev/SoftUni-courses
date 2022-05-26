@@ -21,12 +21,12 @@ namespace _03._Maximal_Sum
                     .Select(int.Parse)
                     .ToArray();
                 for (int col = 0; col < dimensions[1]; col++)
-                    matrix[row, col] = currRow[col];
+                    matrix[row, col] = currRow[col]; 
             }
             //Max sum
             int max = 0;
             for (int row = 0; row < dimensions[0] - 2; row++)
-                for (int col = 0; col < dimensions[1] - 2; col++)
+                for(int col = 0; col < dimensions[1] - 2; col++)
                 {
                     int n1 = matrix[row, col];
                     int n2 = matrix[row, col + 1];
@@ -38,7 +38,7 @@ namespace _03._Maximal_Sum
                     int n8 = matrix[row + 2, col + 1];
                     int n9 = matrix[row + 2, col + 2];
                     int sum = n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9;
-                    if (sum > max)
+                    if(sum > max)
                     {
                         max = sum;
                         winnerMatrix[0, 0] = n1;
@@ -54,9 +54,9 @@ namespace _03._Maximal_Sum
                 }
             //output
             Console.WriteLine($"Sum = {max}");
-            for (int row = 0; row < 3; row++)
+            for(int row = 0; row < 3; row++)
             {
-                for (int col = 0; col < 3; col++)
+                for(int col = 0; col < 3; col++)
                     Console.Write($"{winnerMatrix[row, col]} ");
                 Console.WriteLine();
             }
@@ -64,4 +64,3 @@ namespace _03._Maximal_Sum
         }
     }
 }
-
