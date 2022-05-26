@@ -12,7 +12,6 @@ namespace _09._Simple_Text_Editor
             Stack<string> text = new Stack<string>();
             text.Push(null);
             int n = int.Parse(Console.ReadLine());
-            int count = 1;
             for (int i = 1; i <= n; i++)
             {
                 string[] cmd = Console.ReadLine().Split(' ',StringSplitOptions.RemoveEmptyEntries);
@@ -30,13 +29,12 @@ namespace _09._Simple_Text_Editor
                         Console.WriteLine(sb[int.Parse(cmd[1]) - 1]);
                         break;
                     case "4":
-                        if (count == 1)
+                        if (text.Peek() == sb.ToString())
                         {
                             text.Pop();
                         }
                         sb.Clear();
                         sb.Append(text.Pop());
-                        count++;
                         break;
                 }
             }
