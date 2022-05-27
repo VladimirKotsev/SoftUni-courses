@@ -4,33 +4,68 @@ using System.Linq;
 
 namespace _07._Truck_Tour
 {
-    class Pump
-    {
-        public int Number { get; set; }
-        public int Quantity { get; set; }
-        public int Distance { get; set; }
-
-        public Pump(int number, int quantity, int distance)
-        {
-            this.Number = number;
-            this.Quantity = quantity;
-            this.Distance = distance;
-        }
-    }
     internal class Program
     {
         static void Main(string[] args)
         {
-            Queue<Pump> pumpQueue = new Queue<Pump>();
-            int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            int petrolPumps = int.Parse(Console.ReadLine());
+
+            var difference = new Queue<int>();
+
+            for (int i = 1; i <= petrolPumps; i++)
             {
-                int[] pump = Console.ReadLine()
-                    .Split(' ')
+                var tokens = Console.ReadLine()
+                    .Split()
                     .Select(int.Parse)
                     .ToArray();
-                Pump myPump = new Pump(i, pump[1], pump[2]);
-                pumpQueue.Enqueue(myPump);
+
+                int amountOfPetrol = tokens[0];
+                int distance = tokens[1];
+
+                difference.Enqueue(amountOfPetrol - distance);
+            }
+
+            int index = 0;
+
+            while (true)
+            {
+                var copyDifference = new Queue<int>(difference);
+
+                int fuel = int.MinValue;
+
+                while (copyDifference.Any())
+                {
+                    int currentDiffernce = copyDifference.Peek();
+
+                    if (currentDiffernce > 0 && fuel == int.MinValue)
+                    {
+                        fuel = copyDifference.Dequeue();
+                        difference.Enqueue(difference.Dequeue());
+                    }
+                    else if (currentDiffernce < 0 && fuel == int.MinValue)
+                    {
+                        copyDifference.Enqueue(copyDifference.Dequeue());
+                        difference.Enqueue(difference.Dequeue());
+                        index++;
+                    }
+                    else
+                    {
+                        fuel += copyDifference.Dequeue();
+
+                        if (fuel < 0)
+                        {
+                            break;
+                        }
+                    }
+                }
+
+                if (fuel >= 0)
+                {
+                    Console.WriteLine(index);
+                    return;
+                }
+
+                index++;
             }
         }
     }
