@@ -21,7 +21,7 @@ namespace _11._Key_Revolver
                 for (int i = 1; i <= barrelSize; i++)
                     weapon.Enqueue(bullets.Pop());
             else
-                for (int i = 0; i <= bullets.Count; i++)
+                for (int i = 0; i < bulletCount; i++)
                     weapon.Enqueue(bullets.Pop());
             //locks
             locks = LockFill();
@@ -43,6 +43,7 @@ namespace _11._Key_Revolver
                 }
                 if (weapon.Count == 0) //reload weapon
                 {
+                    int count = bullets.Count;
                     if (bullets.Count == 0)
                         break;
                     Console.WriteLine("Reloading!");
@@ -50,7 +51,7 @@ namespace _11._Key_Revolver
                         for (int i = 1; i <= barrelSize; i++)
                             weapon.Enqueue(bullets.Pop());
                     else
-                        for (int i = 0; i <= bullets.Count; i++)
+                        for (int i = 0; i < count; i++)
                             weapon.Enqueue(bullets.Pop());
                 }
             }
