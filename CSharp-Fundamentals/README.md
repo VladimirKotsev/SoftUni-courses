@@ -5,5 +5,3 @@ With "Programming Fundamentals" students begin to study SoftUni's internal progr
 
 
 Additional technologies needed by each software developer, such as HTML and CSS, HTTP, bitwise operations and others, are studied. The basics of web development are considered, as well as one of the most common technologies and tools, with which the course successfully builds students' understanding of upcoming professional modules and the knowledge they will gain from them to become successful software developers.
-
-Certificate:
