@@ -14,18 +14,21 @@ namespace _10._Crossroads
             int green = greenDuration;
             int yellow = freeWindowDuration;
             int carCounter = 0;
+            bool alreadyEntered = false;
             StringBuilder currCar = new StringBuilder();
-            string cmd = Console.ReadLine();
-            while (cmd != "END")
+            string command = Console.ReadLine();
+            while (command != "END")
             {
-                if (cmd != "green")
+                string[] cmd = command.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                if (command != "green")
                 {
-                    crossroad = QueueUp(crossroad, cmd);
+                    crossroad = QueueUp(crossroad, cmd[0]);
                     green = greenDuration;
                     yellow = freeWindowDuration;
                 }
                 else
                 {
+                    green = greenDuration;
                     int count = crossroad.Count;
                     for (int i = 0; i < count; i++)
                     {
@@ -42,11 +45,16 @@ namespace _10._Crossroads
                         }
                         if (green == 0)
                         {
-                            if (yellow > 0)
+                            if (yellow > 0 && alreadyEntered == true)
                             {
                                 yellow--;
                                 currCar.Append(crossroad.Dequeue().ToString().ToString());
                                 continue;
+                            }
+                            else if (yellow > 0 && alreadyEntered == false)
+                            {
+                                Console.WriteLine("Everyone is safe.");
+                                return;
                             }
                             else
                             {
@@ -59,11 +67,12 @@ namespace _10._Crossroads
                                 return;
                             }
                         }
+                        alreadyEntered = true;
                         green--;
                         currCar.Append(crossroad.Dequeue().ToString());
                     }
                 }
-                cmd = Console.ReadLine();
+                command = Console.ReadLine();
             }
             Console.WriteLine("Everyone is safe.");
             Console.WriteLine($"{carCounter} total cars passed the crossroads.");
