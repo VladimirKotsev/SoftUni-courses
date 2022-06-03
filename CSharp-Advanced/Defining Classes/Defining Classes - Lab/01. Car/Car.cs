@@ -9,17 +9,13 @@ namespace CarManufacturer
         private string make;
         private string model;
         private int year;
-        private double fuelConsumtion;
+        private double fuelConsumption;
         private double fuelQuantity;
 
-        public Car()
+        public double FuelConsumption
         {
-
-        }
-        public double FuelConsumtion
-        {
-            get { return fuelConsumtion; }
-            set { fuelConsumtion = value; }
+            get { return fuelConsumption; }
+            set { fuelConsumption = value; }
         }
         public double FuelQuantity
         {
@@ -43,23 +39,35 @@ namespace CarManufacturer
         }
         public string WhoAmI()
         {
-            string carInfo =
-                $"Make: {this.Make}\r\n" +
-                $"Model: {this.Model}\r\n" +
-                $"Year: {this.Year}\r\n" +
-                $"Fuel: {this.FuelQuantity:F2}L";
-            return carInfo;
+            return
+                $"Make: {this.Make} Model: { this.Model} Year: { this.Year} Fuel: { this.FuelQuantity:F2}";
         }
         public void Drive(double distance)
         {
-            if (this.FuelQuantity >= distance * this.FuelConsumtion)
+            if (this.FuelQuantity >= distance * this.FuelConsumption)
             {
-                this.FuelQuantity -= distance * this.FuelConsumtion;
+                this.FuelQuantity -= distance * this.FuelConsumption;
             }
             else
             {
                 Console.WriteLine("Not enough fuel to perform this trip!");
             }
+        }
+        public Car()
+        {
+
+        }
+        public Car(string make, string model, int year)
+            : this()
+        {
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+        }
+        public Car(string make, string model, int year, double fuelQuantity, double fuelConsumption)
+        {
+            this.FuelConsumption = fuelConsumption;
+            this.FuelQuantity = fuelQuantity;
         }
     }
 }
