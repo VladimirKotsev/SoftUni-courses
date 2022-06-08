@@ -99,64 +99,105 @@ namespace DefiningClasses
             //}
 
             //08. Car Salesman
-            int n = int.Parse(Console.ReadLine());
-            List<Engine> engines = new List<Engine>();
-            List<Car> cars = new List<Car>();
-            Car car1 = new Car();
-            for (int i = 1; i <= n; i++)
-            {
-                string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                int power = int.Parse(input[1]);
-                if (input.Length == 2)
-                {
-                    Engine newEngine = new Engine(input[0], power);
-                    engines.Add(newEngine);
-                }
-                else if (input.Length == 3 && int.TryParse(input[2], out int number))
-                {
-                    Engine newEngine = new Engine(input[0], power, number);
-                    engines.Add(newEngine);
-                }
-                else if (input.Length == 3 && !int.TryParse(input[2], out int number1))
-                {
-                    Engine newEngine = new Engine(input[0], power, input[2]);
-                    engines.Add(newEngine);
-                }
-                else if (input.Length == 4)
-                {
-                    int displacement = int.Parse(input[2]);
-                    string eff = input[3];
-                    Engine newEngine = new Engine(input[0], power, displacement, eff);
-                    engines.Add(newEngine);
-                }
-            }
-            n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
-            {
-                string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-                if (input.Length == 2)
-                {
-                    Car car = new Car(input[0], input[1], engines);
-                    cars.Add(car);
-                }
-                else if (input.Length == 3 && int.TryParse(input[2], out int number))
-                {
-                    Car car = new Car(input[0], input[1], number, engines);
-                    cars.Add(car);
-                }
-                else if (input.Length == 3 && !int.TryParse(input[2], out int number1))
-                {
-                    Car car = new Car(input[0], input[1], input[2], engines);
-                    cars.Add(car);
-                }
-                else if (input.Length == 4)
-                {
-                    Car car = new Car(input[0], input[1], int.Parse(input[2]), input[3], engines);
-                    cars.Add(car);
-                }
-            }
-            car1.ListCars(cars);
+            //int n = int.Parse(Console.ReadLine());
+            //List<Engine> engines = new List<Engine>();
+            //List<Car> cars = new List<Car>();
+            //Car car1 = new Car();
+            //for (int i = 1; i <= n; i++)
+            //{
+            //    string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            //    int power = int.Parse(input[1]);
+            //    if (input.Length == 2)
+            //    {
+            //        Engine newEngine = new Engine(input[0], power);
+            //        engines.Add(newEngine);
+            //    }
+            //    else if (input.Length == 3 && int.TryParse(input[2], out int number))
+            //    {
+            //        Engine newEngine = new Engine(input[0], power, number);
+            //        engines.Add(newEngine);
+            //    }
+            //    else if (input.Length == 3 && !int.TryParse(input[2], out int number1))
+            //    {
+            //        Engine newEngine = new Engine(input[0], power, input[2]);
+            //        engines.Add(newEngine);
+            //    }
+            //    else if (input.Length == 4)
+            //    {
+            //        int displacement = int.Parse(input[2]);
+            //        string eff = input[3];
+            //        Engine newEngine = new Engine(input[0], power, displacement, eff);
+            //        engines.Add(newEngine);
+            //    }
+            //}
+            //n = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < n; i++)
+            //{
+            //    string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            //    if (input.Length == 2)
+            //    {
+            //        Car car = new Car(input[0], input[1], engines);
+            //        cars.Add(car);
+            //    }
+            //    else if (input.Length == 3 && int.TryParse(input[2], out int number))
+            //    {
+            //        Car car = new Car(input[0], input[1], number, engines);
+            //        cars.Add(car);
+            //    }
+            //    else if (input.Length == 3 && !int.TryParse(input[2], out int number1))
+            //    {
+            //        Car car = new Car(input[0], input[1], input[2], engines);
+            //        cars.Add(car);
+            //    }
+            //    else if (input.Length == 4)
+            //    {
+            //        Car car = new Car(input[0], input[1], int.Parse(input[2]), input[3], engines);
+            //        cars.Add(car);
+            //    }
+            //}
+            //car1.ListCars(cars);
 
+            //09. Pokemon Trainer
+            string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            List<Trainer> trainers = new List<Trainer>();
+            Trainer trainer = new Trainer();
+            List<string> addedTrainers = new List<string>();
+            while (input[0] != "Tournament")
+            {
+                string trainerName = input[0];
+                string pokemonName = input[1];
+                string pokemonElement = input[2];
+                int pokemonHealth = int.Parse(input[3]);
+
+                if (addedTrainers.Contains(trainerName))
+                {
+                    int index = addedTrainers.FindIndex(x => x == trainerName);
+                    trainers[index].Collection.Add(new Pokemon(pokemonName, pokemonElement, pokemonHealth));
+                }
+                else
+                {
+                    Trainer newTrainer = new Trainer(trainerName, pokemonName, pokemonElement, pokemonHealth);
+                    trainers.Add(newTrainer);
+                    addedTrainers.Add(trainerName);
+                }
+
+                input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            }
+
+            input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+            while (input[0] != "End")
+            {
+                string element = input[0];
+                var deductions = new List<Trainer>();
+                foreach (Trainer train in trainers)
+                {
+                    deductions.Add(trainer.CheckForGivenElement(train, element));
+                }
+                trainers = deductions;
+                input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            }
+            trainer.PrintOut(trainers.OrderByDescending(x => x.NumberOfBadges).ToList());
         }
         //06. Speed Racing
         //static void PrintOut(List<Car> cars)
