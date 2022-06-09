@@ -6,8 +6,8 @@ namespace GenericArrayCreator
     {
         static void Main(string[] args)
         {
-            string[] strings = ArrayCreator<string>.Create(5, "Pesho");
-            int[] integers = ArrayCreator<int>.Create(10, 33);
+            var strings = ArrayCreator.Create(5, "Pesho");
+            var integers = ArrayCreator.Create(10, 33);
             foreach (var s in strings)
             {
                 Console.WriteLine(s);

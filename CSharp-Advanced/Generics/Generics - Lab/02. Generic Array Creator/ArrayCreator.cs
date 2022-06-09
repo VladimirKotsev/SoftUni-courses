@@ -4,9 +4,9 @@ using System.Text;
 
 namespace GenericArrayCreator
 {
-    public static class ArrayCreator<T>
+    public class ArrayCreator
     {
-        public static T[] Create(int length, T item)
+        public static T[] Create<T>(int length, T item)
         {
             var array = new T[length];
             for (int i = 0; i < length; i++)
