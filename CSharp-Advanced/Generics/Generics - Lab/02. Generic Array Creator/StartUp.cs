@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GenericArrayCreator
+namespace _02._Generic_Array_Creator
 {
     public class StartUp
     {
@@ -12,7 +12,7 @@ namespace GenericArrayCreator
             {
                 Console.WriteLine(s);
             }
-            foreach(var i in integers)
+            foreach (var i in integers)
             {
                 Console.WriteLine(i);
             }
