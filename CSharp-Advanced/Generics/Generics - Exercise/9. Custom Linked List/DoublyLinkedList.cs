@@ -7,64 +7,112 @@ namespace CustomDoublyLinkedList
 {
     public class DoublyLinkedList<T>
     {
-        private List<T> data;
-        public List<T> Data
+        private class ListNode
         {
-            get { return data; }
-            set { data = value; }
+            public T Value { get; set; }
+            public ListNode NextNode { get; set; }
+            public ListNode PreviousNode { get; set; }
+            public ListNode(T value)
+            {
+                this.Value = value;
+            }
         }
+        private ListNode head;
+        private ListNode tail;
 
-        public DoublyLinkedList()
-        {
-            this.Data = new List<T>();
-        }
-        public int Count()
-        { return this.Data.Count(); }
-        public bool Contains(T element)
-        {
-            {return Data.Contains(element); }
-        }
+        public int Count { get; set; }
+
+
         public void AddFirst(T element)
-        { Data.Insert(0, element); }
-        public void AddLast(T element)
-        { Data.Insert(Count() - 1, element); }
-        public void RemoveFirst()
-        { Data.RemoveAt(0); }
-        public void RemoveLast()
-        { Data.RemoveAt(Count() - 1); }
-
-
-        public void Add(T element)
         {
-            this.Data.Add(element);
+            if (this.Count == 0)
+            {
+                this.head = this.tail = new ListNode(element);
+            }
+            else
+            {
+                var newHead = new ListNode(element);
+                newHead.NextNode = this.head;
+                this.head.PreviousNode = newHead;
+                this.head = newHead;
+            }
+            this.Count++;
         }
-
-        public void Remove(T element)
+        public void AddLast(T element)
         {
-            if (Count() == 0)
+            if (this.Count == 0)
+            {
+                this.head = this.tail = new ListNode(element);
+            }
+            else
+            {
+                var newTail = new ListNode(element);
+                newTail.PreviousNode = this.tail;
+                this.tail.NextNode = newTail;
+                this.tail = newTail;
+            }
+            this.Count++;
+        }
+        public T RemoveFirst()
+        {
+            if (this.Count == 0)
             {
                 throw new ArgumentException("List is empty");
             }
-            if (Contains(element))
-                Data.Remove(element);
-            else
-                throw new ArgumentException("List does not contain such element");
-        }
-        public void RemoveAt(int index)
-        { 
-            if (Count() == 0 || index < 0 || index > Count() - 1)
+            var firstElement = this.head.Value;
+            this.head = this.head.NextNode;
+            if (this.head != null)
             {
-                throw new ArgumentException("Index out of range");
+                this.head.PreviousNode = null;
             }
-            Data.RemoveAt(index);
+            else
+            {
+                this.tail = null;
+            }
+            this.Count--;
+            return firstElement;
+        }
+        public T RemoveLast()
+        {
+            if (this.Count == 0)
+                throw new ArgumentException("List is empty");
+            var lastElement = this.tail.Value;
+            this.tail = this.tail.PreviousNode;
+            if (this.tail != null)
+            {
+                this.tail.NextNode = null;
+            }
+            else
+            {
+                this.head = null;
+            }
+            this.Count--;
+
+            return lastElement;
         }
 
         public void ForEach(Action<T> action)
         {
-            foreach(T d in Data)
+            var currentNode = this.head;
+            while (currentNode != null)
             {
-                
+                action(currentNode.Value);
+                currentNode = currentNode.NextNode; ;
             }
+        }
+
+        public T[] ToArray()
+        {
+            var array = new T[this.Count];
+            var currentNode = this.head.Value;
+            var counter = 0;
+            while (currentNode != null)
+            {
+                array[counter] = currentNode;
+                counter++;
+                currentNode = this.head.NextNode.Value;
+            }
+            return array;
         }
     }
 }
