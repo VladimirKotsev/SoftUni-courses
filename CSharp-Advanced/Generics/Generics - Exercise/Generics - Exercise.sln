@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Generic Count Method Do
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Threeuple", "08. Threeuple\08. Threeuple.csproj", "{B2C4A991-3046-499D-950A-8695F01F6EC1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomDoublyLinkedList", "9. Custom Linked List\CustomDoublyLinkedList.csproj", "{81337AAC-48FC-44B6-9CBB-53EEA1ECBC46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Custom Linked List", "9. Custom Linked List\09. Custom Linked List.csproj", "{81337AAC-48FC-44B6-9CBB-53EEA1ECBC46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
