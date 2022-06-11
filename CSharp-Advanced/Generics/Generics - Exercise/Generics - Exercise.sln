@@ -3,23 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Generic Box of Strings", "01. Generic Box of String\01. Generic Box of Strings.csproj", "{238AC1A9-A92D-4FD7-9143-94B9A0C44D67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Generic Box of Strings", "01. Generic Box of String\01. Generic Box of Strings.csproj", "{238AC1A9-A92D-4FD7-9143-94B9A0C44D67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Generic Box of Integers", "02. Generic Box of Integers\02. Generic Box of Integers.csproj", "{A6CFF18A-1A7A-470E-9E4F-4D7D6A1204E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Generic Box of Integers", "02. Generic Box of Integers\02. Generic Box of Integers.csproj", "{A6CFF18A-1A7A-470E-9E4F-4D7D6A1204E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Generic Swap Method String", "03. Generic Swap Method String\03. Generic Swap Method String.csproj", "{C2B98015-24CB-46EF-9BEE-973EDC32736E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Generic Swap Method String", "03. Generic Swap Method String\03. Generic Swap Method String.csproj", "{C2B98015-24CB-46EF-9BEE-973EDC32736E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Generic Swap Method Integer", "04. Generic Swap Method Integers\04. Generic Swap Method Integer.csproj", "{4504E070-3B1A-4FF7-8404-08C1BDB27DE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Generic Swap Method Integer", "04. Generic Swap Method Integers\04. Generic Swap Method Integer.csproj", "{4504E070-3B1A-4FF7-8404-08C1BDB27DE4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Count", "05. Generic Count Method String\Count.csproj", "{9A25FC01-87AF-4B8D-8CE9-F040A55E1A26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Generic Count Method String", "05. Generic Count Method String\05. Generic Count Method String.csproj", "{9A25FC01-87AF-4B8D-8CE9-F040A55E1A26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07. Tuple", "07. Tuple\07. Tuple.csproj", "{58542B2D-0F5C-4A19-B1EA-DCC34F291B7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Tuple", "07. Tuple\07. Tuple.csproj", "{58542B2D-0F5C-4A19-B1EA-DCC34F291B7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Generic Count Method Double", "06. Generic Count Method Double\06. Generic Count Method Double.csproj", "{7A9C41AE-A13D-4196-92A6-1B8082B2F1D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Generic Count Method Double", "06. Generic Count Method Double\06. Generic Count Method Double.csproj", "{7A9C41AE-A13D-4196-92A6-1B8082B2F1D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08. Threeuple", "08. Threeuple\08. Threeuple.csproj", "{B2C4A991-3046-499D-950A-8695F01F6EC1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Threeuple", "08. Threeuple\08. Threeuple.csproj", "{B2C4A991-3046-499D-950A-8695F01F6EC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDoublyLinkedList", "9. Custom Linked List\CustomDoublyLinkedList.csproj", "{81337AAC-48FC-44B6-9CBB-53EEA1ECBC46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomDoublyLinkedList", "9. Custom Linked List\CustomDoublyLinkedList.csproj", "{81337AAC-48FC-44B6-9CBB-53EEA1ECBC46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
