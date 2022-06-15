@@ -27,7 +27,7 @@ namespace _03._Stack
                         }
                         catch (ArgumentException ae)
                         {
-                            Console.WriteLine(ae);
+                            Console.WriteLine(ae.Message);
                         }
                         break;
                 }
