@@ -8,15 +8,15 @@ namespace _05._Generic_Count_Method_String
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
-            var list = new List<double>();
+            var list = new List<string>();
             for (int i = 0; i < n; i++)
             {
-                var input = double.Parse(Console.ReadLine());
+                var input = Console.ReadLine();
                 list.Add(input);
             }
 
-            var box = new Box<double>(list);
-            var elementToCompare = double.Parse(Console.ReadLine());
+            var box = new Box<string>(list);
+            var elementToCompare = Console.ReadLine();
             var count = box.CountOFGreaterElements(list, elementToCompare);
             Console.WriteLine(count);
         }
