@@ -43,6 +43,7 @@ namespace SkiRental
         {
             bool remove = false;
             int index = 0;
+
             for (int i = 0; i < this.data.Count; i++)
             {
                 if (this.data[i].Manufacturer == manufacturer && this.data[i].Model == model)
@@ -52,8 +53,10 @@ namespace SkiRental
                     break;
                 }
             }
+
             if (remove == true)
                 this.data.RemoveAt(index);
+
             return remove;
         }
         public Ski GetNewestSki()
