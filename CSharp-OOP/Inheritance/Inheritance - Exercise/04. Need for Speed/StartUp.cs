@@ -1,5 +1,5 @@
 ﻿
-namespace PlayersAndMonsters
+namespace NeedForSpeed
 {
     using System;
     public class StartUp
