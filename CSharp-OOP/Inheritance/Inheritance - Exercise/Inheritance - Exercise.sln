@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Zoo", "02. Zoo\02. Zoo.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. PLayers аnd Monsters", "03. Players and Monsters\03. PLayers аnd Monsters.csproj", "{5661D906-4739-4A0D-B6D4-2E543218878B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NeedForSpeed", "04. Need for Speed\NeedForSpeed.csproj", "{BE7B57D8-05D2-4D81-BF48-6EB3811236FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. NeedForSpeed", "04. Need for Speed\04. NeedForSpeed.csproj", "{BE7B57D8-05D2-4D81-BF48-6EB3811236FC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Restaurant", "05. Restaurant\05. Restaurant.csproj", "{91D93C23-CC4C-47E3-AE9F-64B0F6E59D17}"
 EndProject
