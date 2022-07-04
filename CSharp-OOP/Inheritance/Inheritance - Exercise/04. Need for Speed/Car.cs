@@ -9,7 +9,8 @@
 
         public override void Drive(double kilometers)
         {
-            this.Fuel -= kilometers * 3.00;
+            double fuel = this.Fuel - 3 * kilometers;
+            this.Fuel = fuel;
         }
     }
 }
