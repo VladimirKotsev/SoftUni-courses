@@ -5,9 +5,8 @@
         protected int HorsePower { get; set; }
         protected double Fuel { get; set; }
 
-        public double DefaultFuelConsumption = 1.25;
+        private const double DefaultFuelConsumption = 1.25;
 
-        protected virtual double FuelConsumption;
         public Vehicle(int horsePower, double fuel)
         {
             this.HorsePower = horsePower;
@@ -15,7 +14,7 @@
         }
         public virtual void Drive(double kilometers)
         {
-
+            this.Fuel -= kilometers * DefaultFuelConsumption;
         }
     }
 }

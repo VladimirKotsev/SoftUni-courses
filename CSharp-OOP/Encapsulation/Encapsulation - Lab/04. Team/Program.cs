@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _05._Restaurant
+namespace _04._Team
 {
     internal class Program
     {
