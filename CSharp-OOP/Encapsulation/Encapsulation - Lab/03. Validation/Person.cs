@@ -20,7 +20,6 @@
             }
         }
         private string lastName;
-
         public string LastName
         {
             get { return lastName; }
@@ -34,7 +33,6 @@
                 }
             }
         }
-
         private int age;
         public int Age
         {
@@ -81,7 +79,7 @@
         }
         public override string ToString()
         {
-            return $"{this.FirstName} {this.LastName} receives {salary:f2} leva.";
+            return $"{this.FirstName} {this.LastName} receives {this.Salary:f2} leva.";
         }
     }
 }

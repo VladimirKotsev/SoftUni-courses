@@ -6,6 +6,11 @@
     public class Team
     {
         private string name;
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         private List<Person> firstTeam;
         public IReadOnlyCollection<Person> FirstTeam
         {
@@ -19,7 +24,7 @@
 
         public Team(string name)
         {
-            this.name = name;
+            this.Name = name;
             this.firstTeam = new List<Person>();
             this.reserveTeam = new List<Person>();
         }
@@ -30,6 +35,12 @@
                 { firstTeam.Add(person); }
             else
                 { reserveTeam.Add(person); }
+        }
+
+        public override string ToString()
+        {
+            return $"First team has {this.FirstTeam.Count} players.{Environment.NewLine}" +
+                   $"Reserve team has {this.ReserveTeam.Count} players.";
         }
     }
 }

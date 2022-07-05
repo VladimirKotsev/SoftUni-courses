@@ -12,7 +12,6 @@
             set { firstName = value; }
         }
         private string lastName;
-
         public string LastName
         {
             get { return lastName; }
