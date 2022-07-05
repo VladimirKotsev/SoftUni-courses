@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. NeedForSpeed", "04. Nee
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Restaurant", "05. Restaurant\05. Restaurant.csproj", "{91D93C23-CC4C-47E3-AE9F-64B0F6E59D17}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Animals", "06. Animals\06. Animals.csproj", "{9B1A54EC-8975-403A-ACB8-EC31AA61D771}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "06. Animals\Animals.csproj", "{9B1A54EC-8975-403A-ACB8-EC31AA61D771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
