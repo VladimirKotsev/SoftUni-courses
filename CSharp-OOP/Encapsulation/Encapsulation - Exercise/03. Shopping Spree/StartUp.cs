@@ -20,7 +20,7 @@ namespace _03._Shopping_Spree
                 catch (ArgumentException ae)
                 {
                     Console.WriteLine(ae.Message);
-                    throw;
+                    return;
                 }
             }
 
@@ -36,21 +36,42 @@ namespace _03._Shopping_Spree
                 catch (ArgumentException ae)
                 {
                     Console.WriteLine(ae.Message);
-                    throw;
+                    return;
                 }
             }
 
             string[] input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            while (input[0] != "END")
+            try
             {
-                if ()
-                int indexPerson = people.FindIndex(x => x.Name == input[0]);
-                int indexProduct = products.FindIndex(x => x.Name == input[1]);
 
+                while (input[0] != "END")
+                {                
+                    int indexPerson = people.FindIndex(x => x.Name == input[0]);
+                    int indexProduct = products.FindIndex(x => x.Name == input[1]);
 
+                    if (people[indexPerson].Money >= products[indexProduct].Cost)
+                    {
+                        people[indexPerson].AddProductToBag(products[indexProduct]);
+                        people[indexPerson].ReduceMoney(products[indexProduct].Cost);
+                        Console.WriteLine($"{input[0]} bought {input[1]}");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{input[0]} can't afford {input[1]}");
+                    }
 
+                    input = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                }
+            }
+            catch (ArgumentException ae)
+            {
+                Console.WriteLine(ae.Message);
+                return;
+            }
 
-                input = Console.ReadLine().Split(' ');
+            foreach (var person in people)
+            {
+                Console.WriteLine(person);
             }
 
         }

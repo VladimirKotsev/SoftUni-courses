@@ -32,14 +32,18 @@
         public void AddPlayer(Person person)
         {
             if (person.Age < 40)
-                { firstTeam.Add(person); }
+            {
+                firstTeam.Add(person);
+            }
             else
-                { reserveTeam.Add(person); }
+            { 
+                reserveTeam.Add(person); 
+            }
         }
 
         public override string ToString()
         {
-            return $"First team has {this.FirstTeam.Count} players.{Environment.NewLine}" +
+            return $"First team has {this.FirstTeam.Count} players.\n\r" +
                    $"Reserve team has {this.ReserveTeam.Count} players.";
         }
     }

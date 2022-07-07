@@ -23,7 +23,11 @@
         {
             get { return cost; }
             private set 
-            { 
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException(ExceptionClass.ExceptionMsgForMoney);
+                }
                 cost = value; 
             }
         }

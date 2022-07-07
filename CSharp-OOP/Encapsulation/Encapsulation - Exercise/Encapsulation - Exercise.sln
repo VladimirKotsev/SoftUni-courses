@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Class Box Data", "01. Class Box Data\01. Class Box Data.csproj", "{AC387CF0-A52D-4B48-B05F-E83FFE9A99FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Class Box Data", "01. Class Box Data\01. Class Box Data.csproj", "{AC387CF0-A52D-4B48-B05F-E83FFE9A99FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. Animal Farm", "02. Animal Farm\02. Animal Farm.csproj", "{84AD709B-4410-4494-9448-7A6863E09CD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Animal Farm", "02. Animal Farm\02. Animal Farm.csproj", "{84AD709B-4410-4494-9448-7A6863E09CD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShoppingSpree", "03. Shopping Spree\ShoppingSpree.csproj", "{E1FFBB0C-4BEE-4842-A323-F0180C9E6F2F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Shopping Spree", "03. Shopping Spree\03. Shopping Spree.csproj", "{E1FFBB0C-4BEE-4842-A323-F0180C9E6F2F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaCalories", "04. Pizza Calories\PizzaCalories.csproj", "{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{E1FFBB0C-4BEE-4842-A323-F0180C9E6F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1FFBB0C-4BEE-4842-A323-F0180C9E6F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1FFBB0C-4BEE-4842-A323-F0180C9E6F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
