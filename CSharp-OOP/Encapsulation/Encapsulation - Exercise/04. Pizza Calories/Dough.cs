@@ -17,7 +17,7 @@
             get { return typeOfDough; }
             private set
             {
-                if (!ValidateTypeOfDough(value))
+                if (!ValidateTypeOfDough(value.ToLower()))
                 {
                     throw new ArgumentException("Invalid type of dough.");
                 }
@@ -30,7 +30,7 @@
             get { return bakingTech; }
             private set
             {
-                if (!ValidateTypeOfDough(value))
+                if (!ValidateTypeOfDough(value.ToLower()))
                 {
                     throw new ArgumentException("Invalid type of dough.");
                 }
@@ -60,34 +60,38 @@
             this.Weight = weight;
         }
 
-        public double Calculate()
+        public double CalculateDoughCalorie()
         {
             double modifier1 = 0;
             double modifier2 = 0;
-            switch (this.TypeOfDough)
+            switch (this.TypeOfDough.ToLower())
             {
-                case "White": modifier1 = WhiteDough; break;
-                case "Wholegrain": modifier1 = WholegrainDough; break;
+                case "white": modifier1 = WhiteDough; break;
+                case "wholegrain": modifier1 = WholegrainDough; break;
             }
-            switch (this.BakingTech)
+            switch (this.BakingTech.ToLower())
             {
-                case "Crispy": modifier2 = Crispy; break;
-                case "Chewy": modifier2 = Chewy; break;
-                case "Homemade": modifier2 = Homemade; break;
+                case "crispy": modifier2 = Crispy; break;
+                case "chewy": modifier2 = Chewy; break;
+                case "homemade": modifier2 = Homemade; break;
             }
             return (2 * this.Weight) * modifier1 * modifier2;
         }
 
-        public bool ValidateTypeOfDough(string value)
+        private bool ValidateTypeOfDough(string value)
+        {
+            if (value == "white" || value == "wholegrain"
+                || value == "crispy" || value == "chewy" || value == "homemade")
             {
-                if (value == "White" || value == "Wholegrain"
-                    || value == "Crispy" || value == "Chewy" || value == "Homemade")
-                {
-                    return true;
-                }
-                return false;
+                return true;
             }
-
-
+            return false;
         }
+
+        public override string ToString()
+        {
+            return $"{CalculateDoughCalorie():f2}";
+        }
+
     }
+}
