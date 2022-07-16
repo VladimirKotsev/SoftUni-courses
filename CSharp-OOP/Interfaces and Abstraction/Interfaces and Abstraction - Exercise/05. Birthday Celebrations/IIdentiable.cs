@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
-    public interface IPersonable
+    public interface IIdentiable
     {
         public string Id { get; set; }
 

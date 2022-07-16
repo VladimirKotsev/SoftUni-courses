@@ -9,11 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Multiple Implementation
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Telephony", "03. Telephony\03. Telephony.csproj", "{ABCD407A-EE6D-4655-A3C1-F27E767E8699}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Border Control", "04. Border Control\04. Border Control.csproj", "{706D3E1A-A523-41E4-BFAB-F07809C8E8E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Border Control", "04. Border Control\04. Border Control.csproj", "{706D3E1A-A523-41E4-BFAB-F07809C8E8E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Birthday Celebrations", "05. Birthday Celebrations\05. Birthday Celebrations.csproj", "{96963BEE-6C2E-49F0-B2C7-E7340ADFDE75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Birthday Celebrations", "05. Birthday Celebrations\05. Birthday Celebrations.csproj", "{96963BEE-6C2E-49F0-B2C7-E7340ADFDE75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. Food Shortage", "06. Food Shortage\06. Food Shortage.csproj", "{74C38D40-FF62-4FB7-8C24-13DAE575E6EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Food Shortage", "06. Food Shortage\06. Food Shortage.csproj", "{74C38D40-FF62-4FB7-8C24-13DAE575E6EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Text;
-    public class Robot : IPersonable
+    public class Robot : IIdentiable
     {
         public string Model { get; set; }
         public string Id { get; set; }
