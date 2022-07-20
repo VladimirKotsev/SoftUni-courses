@@ -10,7 +10,14 @@
         public double Radius
         {
             get { return radius; }
-            private set { radius = value; }
+            private set 
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Invalid radius!");
+                }
+                radius = value; 
+            }
         }
 
         public Circle(double radius)
@@ -20,12 +27,16 @@
 
         public override double CalculatePerimeter()
         {
-            throw new NotImplementedException();
+            return 2 * Math.PI * this.Radius;
         }
 
         public override double CalculateArea()
         {
-            throw new NotImplementedException();
+            return Math.PI * Math.Pow(this.Radius, 2);
+        }
+        public override string Draw()
+        {
+            return base.Draw() + $" {this.GetType().Name}";
         }
     }
 }

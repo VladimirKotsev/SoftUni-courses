@@ -10,7 +10,7 @@
 
         public virtual string Draw()
         {
-
+            return "Drawing";
         }
     }
 }
