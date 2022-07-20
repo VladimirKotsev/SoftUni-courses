@@ -25,7 +25,8 @@
                 case "Warrior":
                     baseHero = new Warrior(name);
                     break;
-                default: Console.WriteLine("Invalid hero!"); 
+                default: 
+                    Console.WriteLine("Invalid hero!"); 
                     break;
             }
 

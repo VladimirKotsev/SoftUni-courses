@@ -30,7 +30,7 @@
             get { return bakingTech; }
             private set
             {
-                if (!ValidateTypeOfDough(value.ToLower()))
+                if (!ValidateBakingTechnique(value.ToLower()))
                 {
                     throw new ArgumentException("Invalid type of dough.");
                 }
@@ -78,10 +78,17 @@
             return (2 * this.Weight) * modifier1 * modifier2;
         }
 
+        private bool ValidateBakingTechnique(string value)
+        {
+            if (value == "crispy" || value == "chewy" || value == "homemade")
+            {
+                return true;
+            }
+            return false;
+        }
         private bool ValidateTypeOfDough(string value)
         {
-            if (value == "white" || value == "wholegrain"
-                || value == "crispy" || value == "chewy" || value == "homemade")
+            if (value == "white" || value == "wholegrain")
             {
                 return true;
             }

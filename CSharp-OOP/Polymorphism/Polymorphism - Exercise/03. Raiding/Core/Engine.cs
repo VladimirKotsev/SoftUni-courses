@@ -11,7 +11,9 @@
         public void Start()
         {
             int n = int.Parse(Console.ReadLine());
-            for (int i = 0; i < n; i++)
+            int counter = 0;
+
+            while (counter != n)
             {
                 string name = Console.ReadLine();
                 string type = Console.ReadLine();
@@ -20,7 +22,10 @@
                 BaseHero hero = heroFactory.CreateClass(type, name);
 
                 if (hero != null)
+                {
                     heroes.Add(hero);
+                    counter++;
+                }
 
             }
 

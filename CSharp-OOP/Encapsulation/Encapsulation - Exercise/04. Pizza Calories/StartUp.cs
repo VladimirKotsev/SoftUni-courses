@@ -8,47 +8,48 @@
         {
             Pizza pizza = null;
 
-            try
-            {
-                string[] arrayForPizza = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-                pizza = new Pizza(arrayForPizza[1]);
-
-                string[] doughArray = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-                Dough dough = new Dough(doughArray[1], doughArray[2], int.Parse(doughArray[3]));
-
-                pizza = new Pizza(arrayForPizza[1], dough);
-
-
-            }
-            catch (ArgumentException ae)
-            {
-                Console.WriteLine(ae.Message);
-                return;
-            }
+            int numberOfToppings = 0;
 
             while (true)
             {
-                string[] toppingArray = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);  
-
-                if (toppingArray[0] == "END")
-                {
-                    break;
-                }
-
+                string[] arrayInput = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 try
                 {
-                    Topping currentTopping = new Topping(toppingArray[1], int.Parse(toppingArray[2]));
+                    if (arrayInput[0] == "END")
+                    {
+                        break;
+                    }
 
-                    pizza.AddTopping(currentTopping);
+                    if (arrayInput[0] == "Pizza")
+                    {
+                        pizza = new Pizza(arrayInput[1]);
+                    }
+                    else if (arrayInput[0] == "Dough")
+                    {
+                        Dough dough = new Dough(arrayInput[1], arrayInput[2], int.Parse(arrayInput[3]));
+                        pizza.Dough = dough;
+                    }
+                    else if (arrayInput[0] == "Topping")
+                    {
+                        Topping topping = new Topping(arrayInput[1], int.Parse(arrayInput[2]));
+                        numberOfToppings++;
+
+                        if (numberOfToppings > 10)
+                        {
+                            throw new ArgumentException("Number of toppings should be in range [0..10].");
+                        }
+
+                        pizza.AddTopping(topping);
+                    }
 
                 }
                 catch (ArgumentException ae)
                 {
                     Console.WriteLine(ae.Message);
                     return;
-                }         
+                }
+
+
             }
 
             Console.WriteLine(pizza);

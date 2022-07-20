@@ -11,11 +11,11 @@
             get {  return dough; }
             set {  dough = value; }
         }
-        private double totalCalories;
-        public double TotalCalories
+        private double toppingCalories;
+        public double ToppingCalories
         {
-            get { return totalCalories; }
-            private set { totalCalories = value; }
+            get { return toppingCalories; }
+            private set { toppingCalories = value; }
         }
         private string name;
         public string Name
@@ -32,38 +32,28 @@
             }
         }
         private List<Topping> toppings;
-        public IReadOnlyCollection<Topping> Toppings
-        {
-            get { return this.toppings.AsReadOnly(); }
-        }
 
         public Pizza(string name)
         {
             this.Name = name; 
+            this.toppings = new List<Topping>();
         }
 
-        public Pizza(string name, Dough dough)
-        {
-            this.Name = name;
-            this.Dough = dough;
-            this.toppings = new List<Topping>();
-            this.TotalCalories = dough.CalculateDoughCalorie();
-        }
 
         public void AddTopping(Topping topping)
         {
-            if (this.Toppings.Count == 10)
+            if (this.toppings.Count == 10)
             {
                 throw new ArgumentException
                     ("Number of toppings should be in range [0..10].");
             }
             this.toppings.Add(topping);
-            this.TotalCalories += topping.CalculateToppingCalorie();
+            this.ToppingCalories += topping.CalculateToppingCalorie();
         }
 
         public override string ToString()
         {
-            return $"{this.Name} - {this.TotalCalories:f2} Calories.";
+            return $"{this.Name} - {this.ToppingCalories + this.Dough.CalculateDoughCalorie():f2} Calories.";
         }
 
     }

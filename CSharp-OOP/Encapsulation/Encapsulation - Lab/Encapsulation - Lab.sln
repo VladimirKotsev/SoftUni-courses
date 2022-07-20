@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Salary", "02. Salary\02
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Validation", "03. Validation\03. Validation.csproj", "{FC43B109-4231-4CB8-B1CC-3D7311186924}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Team", "04. Team\Team.csproj", "{EF1BC207-C024-4653-9533-323424A6429A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Team", "04. Team\04. Team.csproj", "{EF1BC207-C024-4653-9533-323424A6429A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
