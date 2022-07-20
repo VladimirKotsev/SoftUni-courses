@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Vehicles", "01. Vehicle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Raiding", "03. Raiding\03. Raiding.csproj", "{9031031B-0704-4098-BF2C-A034C2064F09}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WildFarm", "04. Wild Farm\WildFarm.csproj", "{526AB631-A564-4899-9DCA-49A9AEAB060C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Wild Farm", "04. Wild Farm\04. Wild Farm.csproj", "{526AB631-A564-4899-9DCA-49A9AEAB060C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

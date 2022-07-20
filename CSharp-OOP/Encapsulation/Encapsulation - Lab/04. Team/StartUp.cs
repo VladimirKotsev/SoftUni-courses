@@ -10,7 +10,7 @@
             int n = int.Parse(Console.ReadLine());
             for (int i = 0; i < n; i++)
             {
-                string[] line = Console.ReadLine().Split(' ');
+                string[] line = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
                 Person newPerson = new Person(line[0], line[1], int.Parse(line[2]), decimal.Parse(line[3]));
                 persons.Add(newPerson);
             }
@@ -22,8 +22,7 @@
                 team.AddPlayer(person);
             }
 
-            Console.WriteLine($"First team has {team.FirstTeam.Count} players.");
-            Console.WriteLine($"Reserve team has {team.ReserveTeam.Count} players.");
+            Console.WriteLine(team);
 
         }
     }

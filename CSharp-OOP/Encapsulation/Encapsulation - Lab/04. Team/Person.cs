@@ -53,7 +53,7 @@
             get { return salary; }
             set
             {
-                if (salary >= 460)
+                if (value >= 460)
                 { salary = value; }
                 else
                 {

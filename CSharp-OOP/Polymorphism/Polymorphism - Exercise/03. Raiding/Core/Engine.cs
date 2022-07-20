@@ -23,6 +23,7 @@
                     heroes.Add(hero);
 
             }
+
             int powerOfBoss = int.Parse(Console.ReadLine());
             int powerOfHeroes = 0;
 
