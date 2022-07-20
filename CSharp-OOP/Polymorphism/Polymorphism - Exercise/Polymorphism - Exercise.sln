@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. Vehicles", "01. Vehicles\01. Vehicles.csproj", "{C174575D-7E66-4120-8021-4AD98D193464}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Raiding", "03. Raiding\03. Raiding.csproj", "{9031031B-0704-4098-BF2C-A034C2064F09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Raiding", "03. Raiding\03. Raiding.csproj", "{9031031B-0704-4098-BF2C-A034C2064F09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. Wild Farm", "04. Wild Farm\04. Wild Farm.csproj", "{526AB631-A564-4899-9DCA-49A9AEAB060C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WildFarm", "04. Wild Farm\WildFarm.csproj", "{526AB631-A564-4899-9DCA-49A9AEAB060C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

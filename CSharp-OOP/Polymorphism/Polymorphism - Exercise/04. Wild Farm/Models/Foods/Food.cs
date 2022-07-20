@@ -1,4 +1,4 @@
-﻿namespace WildFarm.Models
+﻿namespace WildFarm.Models.Foods
 {
     public abstract class Food
     {

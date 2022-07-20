@@ -1,9 +1,9 @@
 ﻿namespace WildFarm.Models.Animals.Mammals
 {
-    public class Feline : Mammal
+    public abstract class Feline : Mammal
     {
-        public Feline(string name, double weight, int foodEaten, string livingRegion, string breed) 
-            : base(name, weight, foodEaten, livingRegion)
+        public Feline(string name, double weight, string livingRegion, string breed) 
+            : base(name, weight, livingRegion)
         {
             this.Breed = breed;
         }
@@ -13,6 +13,11 @@
         {
             get { return breed; }
             set { breed = value; }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"{this.Breed}, {this.Weight}, {this.LivingRegion}, {this.FoodEaten}]";
         }
 
     }

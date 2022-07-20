@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace WildFarm.Core.Intefaces
+﻿namespace WildFarm.Core.Intefaces
 {
-    internal interface IEngine
+    public interface IEngine
     {
+        void Start();
     }
 }
