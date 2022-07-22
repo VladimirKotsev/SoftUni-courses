@@ -9,9 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Animal Farm", "02. Anim
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Shopping Spree", "03. Shopping Spree\03. Shopping Spree.csproj", "{E1FFBB0C-4BEE-4842-A323-F0180C9E6F2F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PizzaCalories", "04. Pizza Calories\PizzaCalories.csproj", "{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "04. Pizza Calories", "04. Pizza Calories\04. Pizza Calories.csproj", "{DE528DD3-21A3-4C86-B8E9-C551E135ADC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05. Football Team Generator", "05. Football Team Generator\05. Football Team Generator.csproj", "{0B54D605-B969-4A5E-8FBB-B9B2580066A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05. Football Team Generator", "05. Football Team Generator\05. Football Team Generator.csproj", "{0B54D605-B969-4A5E-8FBB-B9B2580066A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

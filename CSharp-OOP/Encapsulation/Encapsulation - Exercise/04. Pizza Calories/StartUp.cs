@@ -12,7 +12,7 @@
 
             while (true)
             {
-                string[] arrayInput = Console.ReadLine().Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                string[] arrayInput = Console.ReadLine().Split(' ');
                 try
                 {
                     if (arrayInput[0] == "END")
