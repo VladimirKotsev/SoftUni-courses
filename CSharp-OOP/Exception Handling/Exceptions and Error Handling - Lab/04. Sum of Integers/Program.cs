@@ -6,7 +6,7 @@
         static void Main(string[] args)
         {
             string[] array = Console.ReadLine()
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                .Split(' ');
 
             int sum = 0;
 
@@ -29,6 +29,7 @@
                     Console.WriteLine($"Element '{array[i]}' processed - current sum: {sum}");
                 }
             }
+
             Console.WriteLine($"The total sum of all integers is: {sum}");
         }
     }
