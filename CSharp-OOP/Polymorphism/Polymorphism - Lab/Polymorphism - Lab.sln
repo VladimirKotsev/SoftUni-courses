@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01. MathOperation", "01. Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02. Animals", "02. Animals\02. Animals.csproj", "{5CE0E5E5-C845-4D20-85F1-57ADF5ED9BC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shapes", "03. Shapes\Shapes.csproj", "{2D8867C3-C155-40B1-B73C-701C8CC81A16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "03. Shapes", "03. Shapes\03. Shapes.csproj", "{2D8867C3-C155-40B1-B73C-701C8CC81A16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
