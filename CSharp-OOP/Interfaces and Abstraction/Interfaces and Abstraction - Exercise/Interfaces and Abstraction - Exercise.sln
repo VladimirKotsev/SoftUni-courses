@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06. Food Shortage", "06. Fo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07. Military Elite", "07. Military Elite\07. Military Elite.csproj", "{F06C82D2-4836-4727-A42D-A7C31B6B278A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "08. Collection Hierarchy", "08. Collection Hierarchy\08. Collection Hierarchy.csproj", "{E4F92276-2616-438D-AF4B-80BA2FA181E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CollectionHierarchy", "08. Collection Hierarchy\CollectionHierarchy.csproj", "{E4F92276-2616-438D-AF4B-80BA2FA181E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09. Explicit Interfaces", "09. Explicit Interfaces\09. Explicit Interfaces.csproj", "{98A3B7BB-B372-4CD8-97A1-68ADEE3DA601}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "09. Explicit Interfaces", "09. Explicit Interfaces\09. Explicit Interfaces.csproj", "{98A3B7BB-B372-4CD8-97A1-68ADEE3DA601}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
