@@ -8,39 +8,6 @@ namespace DatabaseExtended.Tests
     [TestFixture]
     public class ExtendedDatabaseTests
     {
-
-        //private Person[] validPersons = new Person[]
-        //{
-        //    new Person(1, "Pesho"), new Person(2, "Teodor"), new Person(3, "Someone"),
-        //    new Person(4, "Penka"), new Person(5, "Someone else"), new Person(6, "Me"),
-        //    new Person(7, "Him"), new Person(8, "Her"), new Person(9, "His"),
-        //    new Person(10, "Hers"), new Person(11, " "),
-        //    new Person(12, "  else"), new Person(13, "   "), new Person(14, "Nobody"),
-        //    new Person(15, "There"),  new Person(16, "Here"), new Person(17, "Somewhere"),
-        //    new Person(18, "Last One")
-        //};
-        //private Person[] dublicativeNames = new Person[] { new Person(1, "Pesho"), new Person(2, "Pesho") };
-        //private Person[] dublicativeIds = new Person[] { new Person(1, "Pesho"), new Person(1, "Teodor") };
-
-        //[Test]
-        //public void TestConstructorInvalidParameters()
-        //{
-        //    Person[] invalidPersons = new Person[]
-        //    {
-        //        new Person(1, "Pesho"), new Person(2, "Teodor"), new Person(3, "Someone"),
-        //        new Person(4, "Penka"), new Person(5, "Someone else"), new Person(6, "Me"),
-        //        new Person(7, "Him"), new Person(8, "Her"), new Person(9, "His"),
-        //        new Person(10, "Hers"), new Person(11, " "),
-        //        new Person(12, "  else"), new Person(13, "   "), new Person(14, "Nobody"),
-        //        new Person(15, "There"),  new Person(16, "Here"), new Person(17, "Somewhere"),
-        //        new Person(18, "Last One")
-        //    };
-
-        //    var database = new Database(invalidPersons);
-            
-        //    Assert.Throws<InvalidOperationException>
-        //}
-
         [Test]
         public void TestConstructorForInvalidParameters()
         {
