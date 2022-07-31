@@ -13,4 +13,8 @@
     <PackageReference Include="coverlet.collector" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\04. Fighting Arena\FightingArena.csproj" />
+  </ItemGroup>
+
 </Project>
