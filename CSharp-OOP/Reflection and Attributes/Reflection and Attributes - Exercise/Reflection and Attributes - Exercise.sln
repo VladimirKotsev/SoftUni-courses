@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Command Pattern", "01. Command Pattern\01. Command Pattern.csproj", "{0C31A6E4-1D49-49A1-88D4-6E896E7FFCAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandPattern", "01. Command Pattern\CommandPattern.csproj", "{0C31A6E4-1D49-49A1-88D4-6E896E7FFCAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationAttributes", "02. Validation Attributes\ValidationAttributes.csproj", "{0ED660A1-B4A2-4B1E-9896-A699995DAD15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0C31A6E4-1D49-49A1-88D4-6E896E7FFCAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C31A6E4-1D49-49A1-88D4-6E896E7FFCAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C31A6E4-1D49-49A1-88D4-6E896E7FFCAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ED660A1-B4A2-4B1E-9896-A699995DAD15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED660A1-B4A2-4B1E-9896-A699995DAD15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED660A1-B4A2-4B1E-9896-A699995DAD15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED660A1-B4A2-4B1E-9896-A699995DAD15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

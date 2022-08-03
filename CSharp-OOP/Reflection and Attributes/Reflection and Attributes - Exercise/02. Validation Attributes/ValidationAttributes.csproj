@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>_01._Command_Pattern</RootNamespace>
+    <RootNamespace>ValidationAttributes</RootNamespace>
   </PropertyGroup>
 
 </Project>
