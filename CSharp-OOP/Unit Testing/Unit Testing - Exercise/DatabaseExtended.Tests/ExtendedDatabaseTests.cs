@@ -72,7 +72,7 @@ namespace DatabaseExtended.Tests
         }
 
         [Test]
-        public void TestAddMethodForExceedingCapacity()
+        public void TestAddMethodForExcessingCapacity()
         {
             Assert.Throws<InvalidOperationException>(() =>
             {
