@@ -102,7 +102,7 @@
         [TestCase (199)]
         [TestCase (100)]
         [TestCase (10)]
-        public void TestAttackMethod_ValidParameters(int dmg)
+        public void TestAttackMethod_ValidParameters_LowerThanDefenceWarriorHP(int dmg)
         {
             //Arrange
             Warrior attacker = new Warrior("Gosho", dmg, 100);
@@ -112,6 +112,24 @@
             //Act
             defender.Attack(attacker);
             
+            //Assert
+            Assert.AreEqual(expectedHP, defender.HP);
+        }
+
+        [TestCase (200)]
+        [TestCase (500)]
+        [TestCase (101)]
+        [TestCase (100)]
+        public void TestAttackMethod_ValidParameters_HigherThanDefenceWarriorHp(int dmg)
+        {
+            //Arrange
+            Warrior attacker = new Warrior("Gosho", dmg, 100);
+            Warrior defender = new Warrior("Pesho", 50, 100);
+
+            int expectedHP = 0;
+            //Act
+            attacker.Attack(defender);
+
             //Assert
             Assert.AreEqual(expectedHP, defender.HP);
         }

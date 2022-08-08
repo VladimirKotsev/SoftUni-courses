@@ -78,7 +78,7 @@
             {
                 //Аrrange & Act
                 var myCar = new Car
-                ("Honda", "civic", fuelCapacity, 40.5);
+                ("Honda", "civic", 6.00, fuelCapacity);
             },
             //Assert
             "Fuel capacity cannot be zero or negative!");
@@ -219,7 +219,7 @@
         [TestCase (10)]
         [TestCase (5)]
         [TestCase (2)]
-        public void TestDriveMethodForThrowingException(double kilometers)
+        public void TestDriveMethodNoFuel_ThrowingException(double kilometers)
         {
             Assert.Throws<InvalidOperationException>(() =>
             {
@@ -234,17 +234,42 @@
             //Assert
             "You don't have enough fuel to drive!");
         }
+        [TestCase (100, 2)]
+        [TestCase (500, 5)]
+        [TestCase (10, 0.5)]
+        [TestCase (1000, 50)]
+        public void TestDriveMethodWithFuel_ThrowingException(double kilometers, double litters)
+        {
+            Assert.Throws<InvalidOperationException>(() =>
+            {
+                //Arrange
+                string make = "Honda";
+                string model = "Civic";
+                double fuelConsumption = 10.00;
+                double fuelCapacity = 40.5;
 
-        [TestCase (240)]
-        [TestCase(119)]
-        [TestCase(5)]
-        [TestCase(2)]
-        public void TestDriveMethodForSuccessfullyDriving(double kilometers)
+                var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
+
+                //Act
+                myCar.Refuel(litters);
+
+                myCar.Drive(kilometers);
+            },
+            //Assert
+            "You don't have enough fuel to drive!");
+        }
+
+        [TestCase (800, 40)]
+        [TestCase(799, 40)]
+        [TestCase(240, 40)]
+        [TestCase(119, 40)]
+        [TestCase(0, 10)]
+        public void TestDriveMethodForSuccessfullyDriving(double kilometers, double litters)
         {
             //Arrange
-            var myCar = new Car ("Honda", "civic", 6.00, 40.5);
-            myCar.Refuel(40.5);
-            double expectedAmount = 40.5 - (kilometers / 100) * 6.00;
+            var myCar = new Car ("Honda", "Civic", 5.00, litters);
+            myCar.Refuel(litters);
+            double expectedAmount = litters - (kilometers / 100) * 5.00;
 
             //Act
             myCar.Drive(kilometers);
