@@ -41,6 +41,26 @@ namespace FightingArena.Tests
         }
 
         [Test]
+        public void TestCounterForReturningCorrectCount()
+        {
+            //Act
+
+            Warrior warrior1 = new Warrior("Gosho", 20, 100);
+            Warrior warrior2 = new Warrior("Pesho", 30, 200);
+
+            Arena arena = new Arena();
+
+            //Act
+            arena.Enroll(warrior1);
+            arena.Enroll(warrior2);
+            int expectedCount = 2;
+
+
+            //Assert
+            Assert.That(arena.Count, Is.EqualTo(expectedCount));
+        }
+
+        [Test]
         public void TestCountGetterIfReturnsCountOfCollection()
         {
             Warrior warrior1 = new Warrior("Gosho", 20, 100);

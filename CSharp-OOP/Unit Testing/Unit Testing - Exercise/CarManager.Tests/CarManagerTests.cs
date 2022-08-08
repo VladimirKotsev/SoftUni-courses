@@ -1,6 +1,8 @@
 ﻿namespace CarManager.Tests
 {
     using System;
+    using System.Linq;
+    using System.Reflection;
     using NUnit.Framework;
 
     [TestFixture]
@@ -10,36 +12,43 @@
         public void TestConstructorsWithValidParameters()
         {
             //Arrange & Act
-            var myCar = new Car("Honda", "civic", 6.00, 40.5);
+            string make = "Honda";
+            string model = "Civic";
+            double fuelConsumption = 6.00;
+            double fuelCapacity = 40.5;
+
+            var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
 
             //Assert
             Assert.IsNotNull(myCar);
             Assert.That(myCar.FuelAmount, Is.EqualTo(0));
-            Assert.That(myCar.FuelCapacity, Is.EqualTo(40.5));
-            Assert.That(myCar.FuelConsumption, Is.EqualTo(6.00));
-            Assert.That(myCar.Model, Is.EqualTo("civic"));
-            Assert.That(myCar.Make, Is.EqualTo("Honda"));
+            Assert.That(myCar.FuelCapacity, Is.EqualTo(fuelCapacity));
+            Assert.That(myCar.FuelConsumption, Is.EqualTo(fuelConsumption));
+            Assert.That(myCar.Model, Is.EqualTo(model));
+            Assert.That(myCar.Make, Is.EqualTo(make));
         }
 
-        [Test]
-        public void TestClassWithInvalidMake()
+        [TestCase (null)]
+        [TestCase ("")]
+        public void TestClassWithInvalidMake(string make)
         {
             Assert.Throws<ArgumentException>(() =>
             {
                 //Аrrange & Act
-                var myCar = new Car("", "civic", 6.00, 40.5);
+                var myCar = new Car(make, "civic", 6.00, 40.5);
             },
             //Assert
             "Make cannot be null or empty!");
         }
 
-        [Test]
-        public void TestClassWithInvalidModel()
+        [TestCase(null)]
+        [TestCase("")]
+        public void TestClassWithInvalidModel(string model)
         {
             Assert.Throws<ArgumentException>(() =>
             {
                 //Аrrange & Act
-                var myCar = new Car("Honda", "", 6.00, 40.5);
+                var myCar = new Car("Honda", model, 6.00, 40.5);
             },
             //Assert
             "Model cannot be null or empty!");
@@ -63,7 +72,6 @@
         [TestCase(0)]
         [TestCase(-1)]
         [TestCase(-10)]
-
         public void TestClassWithInvalidFuelCapacity(double fuelCapacity)
         {
             Assert.Throws<ArgumentException>(() =>
@@ -75,6 +83,83 @@
             //Assert
             "Fuel capacity cannot be zero or negative!");
         }
+
+        [Test]
+        public void TestGetterOfMake()
+        {
+            //Arrange & Act
+            string make = "Honda";
+            string model = "Civic";
+            double fuelConsumption = 6.00;
+            double fuelCapacity = 40.5;
+
+            var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
+
+            //Assert
+            Assert.That(myCar.Make, Is.EqualTo(make));
+        }
+
+
+        [Test]
+        public void TestGetterOfModel()
+        {
+            //Arrange & Act
+            string make = "Honda";
+            string model = "Civic";
+            double fuelConsumption = 6.00;
+            double fuelCapacity = 40.5;
+
+            var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
+
+            //Assert
+            Assert.That(myCar.Model, Is.EqualTo(model));
+        }
+
+        [Test]
+        public void TestGetterOfFuelConsumption()
+        {
+            //Arrange & Act
+            string make = "Honda";
+            string model = "Civic";
+            double fuelConsumption = 6.00;
+            double fuelCapacity = 40.5;
+
+            var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
+
+            //Assert
+            Assert.That(myCar.FuelConsumption, Is.EqualTo(fuelConsumption));
+        }
+
+        [Test]
+        public void TestGetterOfFuelCapacity()
+        {
+            //Arrange & Act
+            string make = "Honda";
+            string model = "Civic";
+            double fuelConsumption = 6.00;
+            double fuelCapacity = 40.5;
+
+            var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
+
+            //Assert
+            Assert.That(myCar.FuelCapacity, Is.EqualTo(fuelCapacity));
+        }
+
+        [Test]
+        public void TestGetterOfFuelAmount()
+        {
+            //Arrange & Act
+            string make = "Honda";
+            string model = "Civic";
+            double fuelConsumption = 6.00;
+            double fuelCapacity = 40.5;
+
+            var myCar = new Car(make, model, fuelConsumption, fuelCapacity);
+
+            //Assert
+            Assert.That(myCar.FuelAmount, Is.EqualTo(0));
+        }
+
 
         [TestCase(0)]
         [TestCase(-1)]
@@ -95,19 +180,21 @@
             "Fuel amount cannot be zero or negative!");
         }
 
-        [TestCase(50)]
-        [TestCase(20)]
-        public void TestRefuelMethodForExceedingFuelCapacity_Successfully(double litters)
+        [TestCase (50)]
+        [TestCase (20)]
+        [TestCase (16)]
+        public void TestRefuelMethodForExcessingFuelCapacity_Successfully(double litters)
         {
             //Аrrange
             var myCar = new Car
             ("Honda", "civic", 6.00, 15);
+            double expectedLitters = 15;
 
             //Act
             myCar.Refuel(litters);
 
             //Assert
-            Assert.That(myCar.FuelAmount, Is.EqualTo(15));
+            Assert.That(myCar.FuelAmount, Is.EqualTo(expectedLitters));
 
         }
 
@@ -120,17 +207,19 @@
             //Аrrange
             var myCar = new Car
             ("Honda", "civic", 6.00, 40.5);
+            double expectedLitters = litters;
 
             //Act
             myCar.Refuel(litters);
 
             //Assert
-            Assert.That(myCar.FuelAmount, Is.GreaterThan(0));
-            Assert.That(myCar.FuelAmount, Is.LessThanOrEqualTo(40.5));
+            Assert.That(myCar.FuelAmount, Is.EqualTo(expectedLitters));
         }
 
-        [Test]
-        public void TestDriveMethodForThrowingException()
+        [TestCase (10)]
+        [TestCase (5)]
+        [TestCase (2)]
+        public void TestDriveMethodForThrowingException(double kilometers)
         {
             Assert.Throws<InvalidOperationException>(() =>
             {
@@ -139,25 +228,29 @@
                 ("Honda", "civic", 6.00, 40.5);
 
                 //Act
-                myCar.Drive(2);
+                myCar.Drive(kilometers);
 
             },
             //Assert
             "You don't have enough fuel to drive!");
         }
 
-        [Test]
-        public void TestDriveMethodForSuccessfullyDriving()
+        [TestCase (240)]
+        [TestCase(119)]
+        [TestCase(5)]
+        [TestCase(2)]
+        public void TestDriveMethodForSuccessfullyDriving(double kilometers)
         {
             //Arrange
             var myCar = new Car ("Honda", "civic", 6.00, 40.5);
             myCar.Refuel(40.5);
+            double expectedAmount = 40.5 - (kilometers / 100) * 6.00;
 
             //Act
-            myCar.Drive(240);
+            myCar.Drive(kilometers);
 
             //Assert
-            Assert.That(myCar.FuelAmount, Is.EqualTo(26.1));
+            Assert.That(myCar.FuelAmount, Is.EqualTo(expectedAmount));
         }
     }
 }
