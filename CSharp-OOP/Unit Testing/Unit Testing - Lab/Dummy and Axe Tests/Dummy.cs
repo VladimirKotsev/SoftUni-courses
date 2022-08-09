@@ -13,8 +13,8 @@ public class Dummy
     public int Health
     {
         get { return this.health; }
+        set { this.health = value; }
     }
-
     public void TakeAttack(int attackPoints)
     {
         if (this.IsDead())

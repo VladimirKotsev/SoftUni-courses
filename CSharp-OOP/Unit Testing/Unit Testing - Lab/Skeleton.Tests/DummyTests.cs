@@ -1,8 +1,8 @@
-﻿using NUnit.Framework;
-using System;
-
-namespace Skeleton.Tests
+﻿namespace Skeleton.Tests
 {
+    using System;
+    using NUnit.Framework;
+
     [TestFixture]
     public class DummyTests
     {
