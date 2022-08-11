@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym", "01. StructureAndBusinessLogic\Gym.csproj", "{B2DE04FA-B4FD-4AA2-8ADF-AECE4F253B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyms", "03. Unit Testing\Gyms.csproj", "{9847DCBA-71ED-4ABD-956A-9D93E6A009F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymTests", "GymTests\GymTests.csproj", "{300BBD30-95B8-450C-A305-4E3DF4F663A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2DE04FA-B4FD-4AA2-8ADF-AECE4F253B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DE04FA-B4FD-4AA2-8ADF-AECE4F253B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DE04FA-B4FD-4AA2-8ADF-AECE4F253B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DE04FA-B4FD-4AA2-8ADF-AECE4F253B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9847DCBA-71ED-4ABD-956A-9D93E6A009F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9847DCBA-71ED-4ABD-956A-9D93E6A009F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9847DCBA-71ED-4ABD-956A-9D93E6A009F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9847DCBA-71ED-4ABD-956A-9D93E6A009F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{300BBD30-95B8-450C-A305-4E3DF4F663A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{300BBD30-95B8-450C-A305-4E3DF4F663A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{300BBD30-95B8-450C-A305-4E3DF4F663A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{300BBD30-95B8-450C-A305-4E3DF4F663A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5551A00F-D922-402C-A52D-7668F001DA31}
+	EndGlobalSection
+EndGlobal
