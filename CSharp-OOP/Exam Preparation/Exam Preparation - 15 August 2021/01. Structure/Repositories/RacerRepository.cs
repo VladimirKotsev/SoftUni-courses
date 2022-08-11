@@ -51,7 +51,9 @@
 
             foreach(
                 var racer in 
-                this.models.OrderByDescending(x => x.DrivingExperience).ThenBy(t => t.Username))
+                this.models
+                .OrderByDescending(x => x.DrivingExperience)
+                .ThenBy(t => t.Username))
             {
                 sb.Append(racer.ToString());
             }

@@ -57,7 +57,7 @@
             get { return car; }
             private set
             {
-                if (value == null)
+                if (value is null)
                 {
                     throw new ArgumentException(ExceptionMessages.InvalidRacerCar);
                 }

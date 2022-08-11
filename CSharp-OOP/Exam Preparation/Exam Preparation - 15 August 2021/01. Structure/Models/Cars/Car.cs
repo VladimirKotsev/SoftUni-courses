@@ -87,8 +87,6 @@
         }
 
         private double fuelConsumptionPerRace;
-
-
         public double FuelConsumptionPerRace
         {
             get { return fuelConsumptionPerRace; }

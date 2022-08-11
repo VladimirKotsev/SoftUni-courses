@@ -28,24 +28,23 @@
         }
 
         public string AddCar(string type, string make, string model, string VIN, int horsePower)
-        {
-            switch (type)
+        { 
+            if (type == "SuperCar")
             {
-                case "SuperCar":
-                    ICar superCar = new SuperCar(make, model, VIN, horsePower);
-                    cars.Add(superCar);
-
-                    return String.Format(OutputMessages.SuccessfullyAddedCar, make, model, VIN);
-
-                case "TunedCar":
-                    ICar tunedCar = new TunedCar(make, model, VIN, horsePower);
-                    cars.Add(tunedCar);
-
-                    return String.Format(OutputMessages.SuccessfullyAddedCar, make, model, VIN);
-
-                default: throw new ArgumentException(ExceptionMessages.InvalidCarType);
+                ICar superCar = new SuperCar(make, model, VIN, horsePower);
+                cars.Add(superCar);
+            }
+            else if (type == "TunedCar")
+            {
+                ICar tunedCar = new TunedCar(make, model, VIN, horsePower);
+                cars.Add(tunedCar);
+            }
+            else
+            {
+                throw new ArgumentException(ExceptionMessages.InvalidCarType);
             }
 
+            return String.Format(OutputMessages.SuccessfullyAddedCar, make, model, VIN);
         }
 
         public string AddRacer(string type, string username, string carVIN)
@@ -97,11 +96,6 @@
         public string Report()
         {
             return racers.ToString();
-        }
-
-        public void Exit()
-        {
-            Environment.Exit(0);
         }
     }
 }

@@ -42,7 +42,7 @@
 
         public ICar FindBy(string property)
         {
-            return this.models.Find(x => x.VIN == property);
+            return this.models.FirstOrDefault(x => x.VIN == property);
         }
 
     }
