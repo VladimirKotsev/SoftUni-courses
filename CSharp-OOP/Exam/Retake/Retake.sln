@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingApp", "Structure and Business Logic\BookingApp.csproj", "{833770AE-83B9-4C6E-AEC6-55A15FB3CA32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Testing", "Unit Testing", "{C84B03AF-95C3-4B3B-9A70-E535F9395F9D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontDeskApp", "FrontDeskApp\FrontDeskApp.csproj", "{A5E65F29-16F9-4D75-889F-97E8484AF274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookigApp.Tests", "BookigApp.Tests\BookigApp.Tests.csproj", "{48E544CE-5EFA-4DC9-9B23-7660A61B0060}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{833770AE-83B9-4C6E-AEC6-55A15FB3CA32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833770AE-83B9-4C6E-AEC6-55A15FB3CA32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833770AE-83B9-4C6E-AEC6-55A15FB3CA32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833770AE-83B9-4C6E-AEC6-55A15FB3CA32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5E65F29-16F9-4D75-889F-97E8484AF274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5E65F29-16F9-4D75-889F-97E8484AF274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5E65F29-16F9-4D75-889F-97E8484AF274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5E65F29-16F9-4D75-889F-97E8484AF274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48E544CE-5EFA-4DC9-9B23-7660A61B0060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48E544CE-5EFA-4DC9-9B23-7660A61B0060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48E544CE-5EFA-4DC9-9B23-7660A61B0060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48E544CE-5EFA-4DC9-9B23-7660A61B0060}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A5E65F29-16F9-4D75-889F-97E8484AF274} = {C84B03AF-95C3-4B3B-9A70-E535F9395F9D}
+		{48E544CE-5EFA-4DC9-9B23-7660A61B0060} = {C84B03AF-95C3-4B3B-9A70-E535F9395F9D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB6E0EB6-5D4C-422E-A125-F10C9B37F262}
+	EndGlobalSection
+EndGlobal
