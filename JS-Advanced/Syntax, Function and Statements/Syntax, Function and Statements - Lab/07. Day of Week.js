@@ -4,34 +4,33 @@ function dayOfWeek(day)
 
     if (day == `Monday`)
     {
-        result = `1`;
+        console.log(1);
     }
     else if (day == `Tuesday`)
     {
-        result = `2`;
+        console.log(2);
     }
     else if (day == `Wednesday`)
     {
-        result = `3`;
+        console.log(3);
     }
     else if (day == `Thursday`)
     {
-        result = `4`;
+        console.log(4);
     }
     else if (day == `Friday`)
     {
-        result = `5`;
+        console.log(5);
     }
     else if (day == `Saturday`)
     {
-        result = `6`;
+        console.log(6);
     }
     else if (day == `Sunday`);
     {
-        result = `7`;
+        console.log(7);
     }
-
-    console.log(result);
+    
 }
 
 dayOfWeek(`Monday`);
