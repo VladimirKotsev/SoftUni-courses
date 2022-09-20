@@ -37,7 +37,3 @@ function neighbors(matrix){
     return pairs / 2;
 }
 
-console.log(neighbors([['test', 'yes', 'yo', 'ho'],
-['well', 'done', 'yo', '6'],
-['not', 'done', 'yet', '5']]
-));
