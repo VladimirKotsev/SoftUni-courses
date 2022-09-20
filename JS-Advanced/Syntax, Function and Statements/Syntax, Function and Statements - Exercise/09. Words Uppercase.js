@@ -4,5 +4,3 @@ function uppercase(input){
     console.log(words);
 
 }
-
-uppercase('Hi, how are you?');
