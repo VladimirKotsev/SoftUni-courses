@@ -34,6 +34,3 @@ function radar(speed, area){
     }
 
 }
-
-radar(40, `city`);
-radar(21, `residential`);
