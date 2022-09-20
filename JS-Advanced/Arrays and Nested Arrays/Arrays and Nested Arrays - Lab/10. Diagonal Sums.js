@@ -17,5 +17,3 @@ function diagonals(matrix){
 
     console.log(`${mainSum} ${secondSum}`);
 }
-
-diagonals([[20, 40], [10, 60]]);
