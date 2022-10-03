@@ -1,12 +1,11 @@
 function search(){
 
    let list = document.getElementById(`towns`).getElementsByTagName(`li`);
-   let defaultList = ;
-   let clear = false;
 
-   if (clear === true){
+   for (let text of list){
 
-      list = defaultList;
+      text.style.fontWeight = "";
+      text.style.textDecoration = `none`;
    }
 
    let htmlInput = document.getElementById(`searchText`);
@@ -18,12 +17,11 @@ function search(){
       if (list[i].textContent.match(input)){
 
          list[i].style.textDecoration = `underline`;
-         list[i] += `bold`;
+         list[i].style.fontWeight = `bold`;
 
          counter++;
       }
    }
 
    document.getElementById(`result`).textContent = `${counter} matches found`;
-   clear = true;
 }
