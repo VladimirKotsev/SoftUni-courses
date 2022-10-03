@@ -7,9 +7,3 @@ function sort(arr){
         console.log(element);
     });
 }
-
-sort(['test', 
-'Deny', 
-'omen', 
-'Default']
-);
