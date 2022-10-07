@@ -7,17 +7,19 @@ function solve(arr){
 
             result.push(i + 1);
         }
-        else if (arr[i] === `remove`){
-
-            if (result.length === 0){
-
-                console.log(`Empty`);
-                return;
-            }
-
+        else{
             result.pop();
         }
     }
 
-    console.log(result.join(`\n`));
+    if (result.length === 0){
+
+        console.log(`Empty`);
+        return;
+    }
+
+    for(let number of result){
+
+        console.log(number);
+    }
 }
