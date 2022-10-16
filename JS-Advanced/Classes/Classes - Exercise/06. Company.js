@@ -7,7 +7,7 @@ class Company{
 
     addEmployee(name, salary, position, department){
 
-        if (!name || !position || !department || salary < 0){
+        if (!name || !salary || !position || !department || salary < 0){
 
             throw new Error(`Invalid input!`);
         }
@@ -29,6 +29,7 @@ class Company{
 
                     return sum / count;
                 },
+
                 employes: [ {name: name, salary: Number(salary), position: position} ]
             };
         }
@@ -60,7 +61,7 @@ class Company{
         result += `Best Department is: ${best}\n`;
         result += `Average salary: ${obj.avgSalary().toFixed(2)}\n`
 
-        obj.employes.sort((a, b) => {return b.salary - a.salary || a.name.localeCompare(b.name)});
+        obj.employes.sort((a, b) => { return b.salary - a.salary || a.name.localeCompare(b.name) } );
         
 
         for (let employee of obj.employes) {
