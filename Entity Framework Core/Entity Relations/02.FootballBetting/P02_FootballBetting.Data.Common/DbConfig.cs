@@ -2,6 +2,6 @@
 {
     public class DbConfig
     {
-        public const string connectionString = "Server=(localdb)\\MSSQLLocalDB;Database=Bet112;Integrated Security = true;";
+        public const string connectionString = "Server=.;Database=Bet112;Integrated Security = true;";
     }
 }

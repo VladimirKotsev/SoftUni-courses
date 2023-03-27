@@ -1,5 +1,6 @@
 ﻿namespace CarDealer
 {
+    using Microsoft.EntityFrameworkCore;
     using Newtonsoft.Json;
     using AutoMapper;
 
@@ -13,9 +14,9 @@
         {
             CarDealerContext context = new CarDealerContext();
 
-            string inputJson = File.ReadAllText("../../../Datasets/cars.json");
+            //string inputJson = File.ReadAllText("../../../Datasets/sales.json");
 
-            string result = ImportCars(context, inputJson);
+            string result = GetCarsFromMakeToyota(context);
 
             Console.WriteLine(result);
         }
@@ -85,6 +86,86 @@
             context.SaveChanges();
 
             return $"Successfully imported {cars.Count}.";
+        }
+
+        public static string ImportCustomers(CarDealerContext context, string inputJson)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            CustomerDto[] customerDtos = JsonConvert.DeserializeObject<CustomerDto[]>(inputJson)!;
+
+            Customer[] customers = mapper.Map<Customer[]>(customerDtos);
+
+            context.Customers.AddRange(customers);
+            context.SaveChanges();
+
+            return $"Successfully imported {customers.Length}.";
+        }
+
+        public static string ImportSales(CarDealerContext context, string inputJson)
+        {
+            IMapper mapper = new Mapper(new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<CarDealerProfile>();
+            }));
+
+            SaleDto[] saleDtos = JsonConvert.DeserializeObject<SaleDto[]>(inputJson)!;
+
+            ICollection<Sale> validSales = new HashSet<Sale>();
+            foreach (var dto in saleDtos)
+            {
+                if (context.Customers.Any(x => x.Id == dto.CustomerId) && context.Cars.Any(x => x.Id == dto.CarId))
+                {
+                    Sale sale = mapper.Map<Sale>(dto);
+
+                    validSales.Add(sale);
+                }
+            }
+
+            context.Sales.AddRange(validSales);
+            context.SaveChanges();
+
+            return $"Successfully imported {validSales.Count}.";
+        }
+
+        //Problem 14-19
+        public static string GetOrderedCustomers(CarDealerContext context)
+        {
+            var customers = context.Customers
+                .AsNoTracking()
+                .OrderBy(c => c.BirthDate)
+                .ThenByDescending(c => c.IsYoungDriver)
+                .Select(c => new
+                {
+                    Name = c.Name,
+                    BirthDate = c.BirthDate,
+                    IsYoungDriver = c.IsYoungDriver
+                })
+                .ToList();
+
+            return JsonConvert.SerializeObject(customers, Formatting.Indented);
+        }
+
+        public static string GetCarsFromMakeToyota(CarDealerContext context)
+        {
+            var cars = context.Cars
+                .Where(c => c.Make == "Toyota")
+                .AsNoTracking()
+                .OrderBy(c => c.Model)
+                .ThenByDescending(c => c.TravelledDistance)
+                .Select(c => new
+                {
+                    Id = c.Id,
+                    Make = c.Make,
+                    Model = c.Model,
+                    TraveledDistance = c.TravelledDistance
+                })
+                .ToList();
+
+            return JsonConvert.SerializeObject(cars, Formatting.Indented);
         }
     }
 }
