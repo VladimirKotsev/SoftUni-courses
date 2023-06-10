@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Nums 1..." + ViewBag.Count;
+}
+
+<h1>@ViewBag.Title</h1>
+<ul>
+    @for(int i = 1; i <= ViewBag.Count; i++)
+    {
+        <li>@i</li>
+    }
+</ul>
+<form asp-controller="Home" asp-action="NumbersToN" method="post">
+    <input type="number" name="count" step="1" min="1"/>
+    <input type="submit" value="Submit">
+</form>

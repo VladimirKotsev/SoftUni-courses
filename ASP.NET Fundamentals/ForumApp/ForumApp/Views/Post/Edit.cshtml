@@ -1,0 +1,25 @@
+﻿@using ForumApp.Models.Post;
+@model PostViewModel
+@{
+    ViewBag.Title = "Edit Post";
+}
+<h2 class="text-center">@ViewBag.Title</h2>
+<hr />
+<div class="row">
+    <form method="post">
+        <div class="form-group">
+            <div class="mb-3">
+                <label asp-for="PostTitle"></label>
+                <input asp-for="PostTitle" class="form-control" placeholder="Write your title here...">
+                <span asp-validation-for="@Model.PostTitle" class="small text danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="PostDescription"></label>
+                <input asp-for="PostDescription" class="form-control" placeholder="Write your post here...">
+                <span asp-validation-for="@Model.PostDescription" class="small text danger"></span>
+            </div>
+        </div>
+        <input class="btn btn-primary mt-3" type="submit" value="Edit" />
+    </form>
+</div>
+
