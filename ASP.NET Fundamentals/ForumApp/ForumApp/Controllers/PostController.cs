@@ -1,6 +1,5 @@
 ﻿namespace ForumApp.Controllers
 {
-    using ForumApp.Models.Post;
     using Microsoft.AspNetCore.Mvc;
     public class PostController : Controller
     {
@@ -11,40 +10,40 @@
         {
             if (posts.Count == 0)
             {
-                return View(new ForumViewModel());
+                return View();
             }
 
-            var viewModel = new ForumViewModel()
-            {
-                AllPosts = posts
-                    .Select(x => new PostViewModel()
-                    {
-                        PostTitle = x.Key,
-                        PostDescription = x.Value
-                    })
-                    .ToArray()
-            };
+            //var viewModel = new ForumViewModel()
+            //{
+            //    AllPosts = posts
+            //        .Select(x => new PostViewModel()
+            //        {
+            //            PostTitle = x.Key,
+            //            PostDescription = x.Value
+            //        })
+            //        .ToArray()
+            //};
 
-            return View(viewModel);
+            return View();
         }
 
         public IActionResult Edit(int id)
         {
             //var postViewModel = posts.First(x => )
 
-            return View(postViewModel);
+            return View();
         }
 
         [HttpGet]
-        public IActionResult Add(PostViewModel postViewModel) 
+        public IActionResult Add() 
         {
-            return View(postViewModel);
+            return View();
         }
 
         [HttpPost]
-        public IActionResult AddPost(PostViewModel postViewModel)
+        public IActionResult AddPost()
         {
-            posts.Add(new KeyValuePair<string, string>(postViewModel.PostTitle, postViewModel.PostDescription));
+            //posts.Add(new KeyValuePair<string, string>(postViewModel.PostTitle, postViewModel.PostDescription));
 
             return this.RedirectToAction("All");
         }
