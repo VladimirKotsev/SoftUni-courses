@@ -6,13 +6,8 @@
 
     public class Post
     {
-        public Post()
-        {
-            this.Id = Guid.NewGuid();
-        }
-
         [Key]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MaxLength(TitleMaxLength)]

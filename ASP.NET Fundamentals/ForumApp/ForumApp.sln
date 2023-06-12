@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.Data.Models", "For
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.Common", "ForumApp.Common\ForumApp.Common.csproj", "{B6305F6C-55AD-4270-96F1-A15DCC7876BA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.ViewModels", "ForumApp.ViewModels\ForumApp.ViewModels.csproj", "{0FEA1244-6254-432D-9BAE-E06086D5542A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForumApp.Services", "ForumApp.Services\ForumApp.Services.csproj", "{D4D99B1A-7FAE-4C2B-B40D-E4F947A36BAB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B6305F6C-55AD-4270-96F1-A15DCC7876BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6305F6C-55AD-4270-96F1-A15DCC7876BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6305F6C-55AD-4270-96F1-A15DCC7876BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FEA1244-6254-432D-9BAE-E06086D5542A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEA1244-6254-432D-9BAE-E06086D5542A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEA1244-6254-432D-9BAE-E06086D5542A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEA1244-6254-432D-9BAE-E06086D5542A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D99B1A-7FAE-4C2B-B40D-E4F947A36BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D99B1A-7FAE-4C2B-B40D-E4F947A36BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D99B1A-7FAE-4C2B-B40D-E4F947A36BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D99B1A-7FAE-4C2B-B40D-E4F947A36BAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

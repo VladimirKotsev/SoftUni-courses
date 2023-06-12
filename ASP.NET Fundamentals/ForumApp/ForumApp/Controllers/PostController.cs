@@ -1,51 +1,101 @@
 ﻿namespace ForumApp.Controllers
 {
+    using ForumApp.Services.Contracts;
+    using ForumApp.ViewModels.Post;
     using Microsoft.AspNetCore.Mvc;
     public class PostController : Controller
     {
-        private static readonly ICollection<KeyValuePair<string, string>> posts = new List<KeyValuePair<string, string>>();
+        private readonly IPostService postService;
 
-        [HttpGet]
-        public IActionResult All()
+        public PostController(IPostService _postService)
         {
-            if (posts.Count == 0)
-            {
-                return View();
-            }
-
-            //var viewModel = new ForumViewModel()
-            //{
-            //    AllPosts = posts
-            //        .Select(x => new PostViewModel()
-            //        {
-            //            PostTitle = x.Key,
-            //            PostDescription = x.Value
-            //        })
-            //        .ToArray()
-            //};
-
-            return View();
+            this.postService = _postService;
         }
 
-        public IActionResult Edit(int id)
+        public async Task<IActionResult> All()
         {
-            //var postViewModel = posts.First(x => )
+            IEnumerable<PostListViewModel> allPosts = await this.postService.ListAllAsync();
 
-            return View();
+            return View(allPosts);
         }
 
         [HttpGet]
-        public IActionResult Add() 
+        public IActionResult Add()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddPost()
+        public async Task<IActionResult> Add(PostFormModel _model)
         {
             //posts.Add(new KeyValuePair<string, string>(postViewModel.PostTitle, postViewModel.PostDescription));
 
+            if (!ModelState.IsValid)
+            {
+                return View(_model);
+            }
+
+            try
+            {
+                await this.postService.AddPostAsync(_model);
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError(string.Empty, "Unexpected error occurred while adding your post!");
+
+                return View(_model);
+            }
+
             return this.RedirectToAction("All");
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            try
+            {
+                PostFormModel postViewModel = await this.postService.GetForEditOrDeleteByIdAsync(id);
+
+                return View(postViewModel);
+            }
+            catch (Exception)
+            {
+                return this.RedirectToAction("All");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, PostFormModel _postFormModel)
+        {
+            if (!ModelState.IsValid)
+            {
+                return this.View(_postFormModel);
+            }
+
+            try
+            {
+                await this.postService.EditByIdAsync(id, _postFormModel);
+            }
+            catch (Exception)
+            {
+                return View(_postFormModel);
+            }
+
+            return RedirectToAction("All");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                await this.postService.DeleteByIdAsync(id);
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return RedirectToAction("All");
         }
     }
 }

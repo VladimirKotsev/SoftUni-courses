@@ -1,6 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
+
 using ForumApp.Data;
+using ForumApp.Services.Contracts;
+using ForumApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,8 +14,10 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<ForumDbContext>(options =>
 {
-    options.UseSqlServer(connectionString);
+    options.UseSqlServer(connectionString, b => b.MigrationsAssembly("ForumApp"));
 });
+
+builder.Services.AddScoped<IPostService, PostService>();
 
 var app = builder.Build();
 

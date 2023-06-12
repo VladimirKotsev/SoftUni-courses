@@ -13,6 +13,7 @@ namespace ForumApp.Data.Seeding
 
             currentPost = new Post()
             {
+                Id = 1,
                 Title = "My first post",
                 Content = "This is my first post. I hope you like it!"
             };
@@ -20,6 +21,7 @@ namespace ForumApp.Data.Seeding
 
             currentPost = new Post()
             {
+                Id = 2,
                 Title = "My second post",
                 Content = "This is my second post, you might like this one better!"
             };
@@ -27,6 +29,7 @@ namespace ForumApp.Data.Seeding
 
             currentPost = new Post()
             {
+                Id = 3,
                 Title = "My third post",
                 Content = "Best of my three posts!"
             };
