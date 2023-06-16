@@ -9,8 +9,10 @@ import { showEdit } from './views/edit.js';
 import { showCreate } from './views/create.js';
 import { showSearch } from './views/search.js';
 
+
 const logoutLink = document.querySelector(`a[href="javascript:void(0)"]`);
 logoutLink.addEventListener(`click`, onLogout);
+
 
 function onLogout(event){
 
@@ -33,4 +35,6 @@ page.start();
 
 export function renderTemplate(content){
     render(content, document.querySelector(`main`));
+
 }
+
