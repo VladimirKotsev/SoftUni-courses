@@ -15,7 +15,7 @@ namespace ForumApp.Services
 
         public PostService(ForumDbContext _dbContext)
         {
-                this.dbContext = _dbContext;
+            this.dbContext = _dbContext;
         }
 
         public async Task AddPostAsync(PostFormModel postAddViewModel)
