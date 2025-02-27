@@ -1,6 +1,6 @@
 # SoftUni-courses
 
-Courses | SoftUni | Vladimir Kotsev 2021 - ....
+Courses | SoftUni | Vladimir Kotsev 2021 - 2023
 
 SoftUni's Software University project was founded with the idea of an innovative and modern educational center that creates true professionals in the world of programming. For us, as for the entire software industry, the most important are real practical skills.
 
